@@ -82,12 +82,12 @@ var swiper = new Swiper(".teachers-slider", {
   });
 
   //------------------------------
-//   window.onload = ()=>{
-//     $.querySelectorAll('.swiper-pagination-bullet').forEach( item => {
-//         item.style.backgroundColor = 'white';
-//     }) 
-//     $.querySelectorAll('.swiper-pagination-bullet-active').forEach(item=>{
-//         item.style.backgroundColor = '#00E77F';
-//     })
-//   }
+  window.onload = ()=>{
+    $.querySelectorAll('.swiper-pagination-bullet').forEach( item => {
+        item.style.backgroundColor = 'white';
+    }) 
+    $.querySelectorAll('.swiper-pagination-bullet-active').forEach(item=>{
+        item.style.backgroundColor = '#00E77F';
+    })
+  }
   //------------------------------

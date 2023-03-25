@@ -149,7 +149,7 @@ section{
 /* count */
 .count .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    grid-template-columns: repeat(4,1fr);
     gap: 1.5rem;
     align-items: flex-start;
 }
@@ -424,6 +424,7 @@ section{
 /* ---------------------------------------------------------- */
 /* media queries */
 
+
 @media (max-width:991px){
     html{
         font-size: 55%;
@@ -465,9 +466,15 @@ section{
         font-size: 6rem;
     }
 }
+@media(max-width:690px){
+    .count .box-container{
+        grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    }
+}
 @media(max-width:626px){
 
 }
+
 
 @media (max-width:450px){
     html{
