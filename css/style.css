@@ -36,7 +36,7 @@ html{
     scroll-behavior: smooth;
     scroll-padding-top: 8rem;
 }
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
     height: 5rem;
     width: 1rem;
 }
@@ -46,7 +46,7 @@ html{
 ::-webkit-scrollbar-thumb{
     background-color: var(--green);
     border-radius: 5rem;
-}
+} */
 body{
     background-color: var(--black);
 }
