@@ -1,0 +1,21 @@
+
+
+$green:#00E77F;
+$white: #fff;
+$light-white:#aaa;
+$light-bg:#4b4b4b;
+$dark-bg:#4e4e4e;
+$black:#3d3d3d;
+$borderBlack:#020202;
+$white-shadow: rgba(122,122,122,0.3);
+//-----------------------------
+body{
+    background-color: $black;
+    section{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+}
+
+
