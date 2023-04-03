@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +21,8 @@
     <header class="header">
 
         <section class="flex">
-            <a href="#home" class="logo">educat.</a>
+
+            <div id="menu-btn" class="fas fa-bars"></div>
 
             <nav class="navbar">
                 <a href="#contact">ارتباط با ما</a>
@@ -29,10 +30,13 @@
                 <a href="#teachers">مقالات</a>
                 <a href="#review">اساتید</a>
                 <a href="#courses">دوره ها</a>
-                <a href="#home">ورود | عضویت</a>
+                <a href="pages/login-form.html">ورود | عضویت</a>
             </nav>
 
-            <div id="menu-btn" class="fas fa-bars"></div>
+            <p id="online">online</p>
+
+            <a href="index.html" class="logo">educat.</a>
+
         </section>
     </header>
     <!-- header End -->
@@ -41,14 +45,17 @@
     <section class="home" id="home">
         <div class="row">
 
-            <div class="content">
-                <h3>online <span>education</span></h3>
-                <a href="#contact" class="btn">contact us</a>
-            </div>
-
+            
             <div class="image">
                 <img src="images/grapy-boys-going-to-school-together.png" alt="school">
             </div>
+
+            <div class="content">
+                <h3>online <span>education</span></h3>
+                <!-- <h3>آنلاین <span>آموزش</span></h3> -->
+                <a href="#contact" class="btn">انتخاب دوره</a>
+            </div>
+
         </div>
     </section>
     <!-- home section End -->
@@ -61,7 +68,7 @@
                 <i class="fas fa-graduation-cap"></i>
                 <div class="content">
                     <h3>150+</h3>
-                    <p>courses</p>
+                    <p>دوره ها</p>
                 </div>
             </div>
 
@@ -69,7 +76,7 @@
                 <i class="fas fa-user-graduate"></i>
                 <div class="content">
                     <h3>1300+</h3>
-                    <p>students</p>
+                    <p>دانش آموزان</p>
                 </div>
             </div>
 
@@ -77,7 +84,7 @@
                 <i class="fas fa-chalkboard-user"></i>
                 <div class="content">
                     <h3>80+</h3>
-                    <p>teachers</p>
+                    <p>آموزگارها</p>
                 </div>
             </div>
 
@@ -85,7 +92,7 @@
                 <i class="fas fa-face-smile"></i>
                 <div class="content">
                     <h3>100%</h3>
-                    <p>satisfaction</p>
+                    <p>بازخورد ها</p>
                 </div>
             </div>
 
@@ -102,12 +109,12 @@
             </div>
 
             <div class="content">
-                <h3>Why Chose Us?</h3>
+                <h3>چرا ما را انتخاب کنید؟</h3>
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                     Earum sed, harum ipsum nostrum quo pariatur.
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، 
+                    و با استفاده از طراحان گرافیک است، چاپگرها و 
                 </p>
-                <a href="contact" class="btn">contact us</a>
+                <a href="contact" class="btn">ارتباط با ما</a>
             </div>
         </div>
     </section>
@@ -117,33 +124,16 @@
 
     <!-- courses section Start -->
     <section class="courses" id="coursess">
-        <h1 class="heading">our <span>coursess</span></h1>
+        <h1 class="heading"><span>دوره های</span>  ما </h1>
         <div class="course-slider swiper">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper course-wraper">
 
-                <div class="slide swiper-slide">
+                <!-- <div class="course-slide swiper-slide">
                     <img src="images/grapy-man-studies-online-1.png" alt="">
-                    <h3>web development</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, officia.</p>
-                </div>
+                    <h3><a href="pages/courses.html?course_title=مهارت Speaking">لغات 504</a></h3>
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و </p>
+                </div> -->
 
-                <div class="slide swiper-slide">
-                    <img src="images/grapy-young-men-discussing-a-startup.png" alt="">
-                    <h3>science</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, officia.</p>
-                </div>
-
-                <div class="slide swiper-slide">
-                    <img src="images/grapy-colleagues-discussing-analytics-at-work.png" alt="">
-                    <h3>digital marketing</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, officia.</p>
-                </div>
-
-                <div class="slide swiper-slide">
-                    <img src="images/grapy-boy-studying-and-teacher-explaining-lesson-in-classroom.png" alt="">
-                    <h3>math</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, officia.</p>
-                </div>
             </div>
 
             <div class="swiper-pagination"></div>
@@ -154,7 +144,7 @@
 
     <!-- teachers section Start -->
     <section class="teachers" id="teachers">
-            <h1 class="heading">expert <span>tutors</span></h1>
+            <h1 class="heading">تخصص <span>مربیان</span></h1>
             <div class="swiper teachers-slider">
                 <div class="swiper-wrapper">
 
@@ -220,15 +210,13 @@
 
     <!-- reviews section Start -->
     <section class="reviwes" id="reviews">
-        <h1 class="heading">student's <span>reviews</span></h1>
+        <h1 class="heading">مروری بر <span>دانش آموزان </span></h1>
         <div class="swiper reviews-slider">
             <div class="swiper-wrapper">
 
                 <div class="swiper-slide slide">
-                    <p>Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit. Laborum quasi
-                        tempore perferendis illo adipisci
-                        itaque corrupti recusandae sapiente veniam blanditiis.
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، 
+                        و با استفاده از طراحان گرافیک است، چاپگرها و 
                     </p>
                     <div class="user">
                         <img src="images/student/casual-life-3d-young-woman-working-on-laptop-and-showing-v-sign.png" alt="">
@@ -246,10 +234,8 @@
                 </div>
 
                 <div class="swiper-slide slide">
-                    <p>Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit. Laborum quasi
-                        tempore perferendis illo adipisci
-                        itaque corrupti recusandae sapiente veniam blanditiis.
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ،
+                         و با استفاده از طراحان گرافیک است، چاپگرها و 
                     </p>
                     <div class="user">
                         <img src="images/student/casual-life-3d-young-man-surrounded-by-gadgets-taking-notes.png" alt="">
@@ -267,10 +253,8 @@
                 </div>
 
                 <div class="swiper-slide slide">
-                    <p>Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit. Laborum quasi
-                        tempore perferendis illo adipisci
-                        itaque corrupti recusandae sapiente veniam blanditiis.
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ،
+                         و با استفاده از طراحان گرافیک است، چاپگرها و 
                     </p>
                     <div class="user">
                         <img src="images/student/3d-casual-life-young-woman-sitting-in-front-of-laptop-and-having-an-idea-1.png" alt="">
@@ -288,10 +272,8 @@
                 </div>
 
                 <div class="swiper-slide slide">
-                    <p>Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit. Laborum quasi
-                        tempore perferendis illo adipisci
-                        itaque corrupti recusandae sapiente veniam blanditiis.
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ،
+                         و با استفاده از طراحان گرافیک است، چاپگرها و 
                     </p>
                     <div class="user">
                         <img src="images/student/casual-life-3d-young-woman-looking-at-laptop-and-taking-notes-in-notebook.png" alt="">
@@ -309,10 +291,8 @@
                 </div>
 
                 <div class="swiper-slide slide">
-                    <p>Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit. Laborum quasi
-                        tempore perferendis illo adipisci
-                        itaque corrupti recusandae sapiente veniam blanditiis.
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ،
+                         و با استفاده از طراحان گرافیک است، چاپگرها و 
                     </p>
                     <div class="user">
                         <img src="images/student/casual-life-3d-young-woman-working-on-laptop-and-holding-head.png" alt="">
@@ -340,38 +320,41 @@
     <section class="contact" id="contact">
         <h2 class="heading"><span>contact</span> us</h2>
         <div class="row">
+            
+            <form action="" method="post">
+                <label for="name">نام</label>
+                <input type="text" name="name" required placeholder="نام کامل  خود را وارد کنید" maxlength="50" class="box">
+                <label for="email">ایمیل</label>
+                <input type="email" name="email" required placeholder="ایمیل خود را وارد کنید" maxlength="50" class="box">
+                <label for="number">شماره همراه</label>
+                <input type="number" name="number" required placeholder="شماره همراه خود را وارد کنید" max="999999999" min="0" class="box" onkeypress="if(this.value.length == 10) return false;">
+                <label for="">دوره را انتخاب کنبد</label>
+                <select name="courses" class="box" required>
+                    <option value="" disabled selected>انتخاب دوره --</option>
+                    <option value="504 words">لغات 504</option>
+                    <option value="1100 words">لغات 1100</option>
+                    <option value="math">ریاضی به انگلیسی</option>
+                    <option value="English for Business">English for Business</option>
+                    <option value="Speaking">Speaking  مهارت</option>
+                    <option value="listening"> listening مهارت</option>
+                    <option value="Writing">Writing مهارت</option>
+                    <option value="Reading">Reading مهارت</option>
+                    <option value="free discussion">free discussion</option>
+                </select>
+                <label for="gender">جنسیت </label>
+                <div class="radio">
+                    <input type="radio" name="gender" value="male" id="male">
+                    <label for="male">مرد</label>
+                    <input type="radio" name="gender" value="female" id="female">
+                    <label for="female">زن</label>
+                </div>
+                <input type="submit" value="ارسال پیام" class="btn" name="send">
+            </form>
+
             <div class="image">
                 <img src="images/grapy-chat-dialog-with-support-service-1.png" alt="">
             </div>
-            <form action="" method="post">
-                <label for="name">your name</label>
-                <input type="text" name="name" required placeholder="Enter your full name" maxlength="50" class="box">
-                <label for="email">your Email</label>
-                <input type="email" name="email" required placeholder="Enter your email" maxlength="50" class="box">
-                <label for="number">your number</label>
-                <input type="number" name="number" required placeholder="Enter your phone number" max="999999999" min="0" class="box" onkeypress="if(this.value.length == 10) return false;">
-                <label for="">select Courses</label>
-                <select name="courses" class="box" required>
-                    <option value="" disabled selected>select the course --</option>
-                    <option value="web development">web development</option>
-                    <option value="science and biology">science and biology</option>
-                    <option value="engineering">engineering</option>
-                    <option value="digital marketing">digital marketingt</option>
-                    <option value="web development">web development</option>
-                    <option value="graphic design">graphic design</option>
-                    <option value="teaching">teaching</option>
-                    <option value="social studies">social studies</option>
-                    <option value="artificial intelligence">artificial intelligence</option>
-                </select>
-                <label for="gender">select Gender</label>
-                <div class="radio">
-                    <input type="radio" name="gender" value="male" id="male">
-                    <label for="male">male</label>
-                    <input type="radio" name="gender" value="female" id="female">
-                    <label for="female">female</label>
-                </div>
-                <input type="submit" value="send message" class="btn" name="send">
-            </form>
+
         </div>
     </section>
     <!-- contact section End -->
@@ -387,7 +370,7 @@
                     <a href="" class="fab fa-linkedin"></a>
                 </div>
 
-                <div class="credit">&copy; copyright @ 2022 by <span>Nansiiii</span> | all rights reseved!</div>
+                <div class="credit"> ! copyright @ 2022 by <span>Nansiiii</span> | all rights reseved &copy;</div>
 
             </section>
         </footer>
@@ -406,8 +389,8 @@
     <!-- swioer js link -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- custom js file link -->
-    <script src="js/script.js
-    "></script>
+    <script src="js/script.js"></script>
+    <!-- <script src="js/test.js"></script> -->
     
 </body>
 </html>

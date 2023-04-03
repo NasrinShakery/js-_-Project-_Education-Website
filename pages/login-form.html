@@ -1,12 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/login-form.css">
 </head>
 <body>
-    
+    <div class="home-btn">
+        <a href="../index.html"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
+    </div>
+    <div class="form-container">
+        <form action="">
+            <h3>ورود</h3>
+            <label for="username">نام کاربری</label>
+            <input type="text" name="username" id="username" placeholder="شماره موبایل خود را وارد کنید">
+
+            <label for="password">رمز عبور</label>
+            <div class="pass">
+                <input type="password" class="pass" name="password" id="password" placeholder="رمز عبور خور را وارد کنید">
+                <i id="show-hide" class="fa fa-eye-slash"></i>
+            </div>
+            <button type="submit">ورود</button>
+            <hr>
+            <div class="social-countainer">
+                <h3>ورود با اکانت</h3>
+                <div class="social">
+                    <div><a class="go" href="#"><i class="fa fa-google"></i></a></div>
+                    <div><a class="fb" href="#"><i class="fa fa-facebook"></i></a></div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="../js/login-form.js"></script>
 </body>
 </html>

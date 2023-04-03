@@ -17,7 +17,8 @@
 
 //------------------------------------------------
 *{
-    font-family: 'Rubik', sans-serif;
+    // font-family: 'Rubik', sans-serif;
+    font-family: 'amin';
     margin: 0; padding: 0;
     box-sizing: border-box;
     outline: none;
@@ -111,8 +112,8 @@ html{
 }
 // ----------------Home--------------------
 .home{
-    margin-top: 6rem;
-    border: 2px solid $borderBlack;
+    margin-top: 6.5rem;
+    // border: 2px solid $borderBlack;
     .row{
         display: flex;
         align-items: center;
@@ -153,6 +154,7 @@ html{
         .box{
             background-color: $light-bg;
             border-radius: 0.5rem;
+            border: 2px solid $borderBlack;
             padding: 2rem;
             display: flex;
             align-items: center;
@@ -209,8 +211,9 @@ html{
 .courses{
     .course-slider{
         .swiper-wrapper{
-            .slide{
+            .course-slide{
                 border: 2px solid $borderBlack;
+                border-radius: 0.5rem;
                 /* width: 30rem; */
                 background-color: $light-bg;
                 text-align: center;
@@ -222,9 +225,11 @@ html{
                     height: 24rem;
                 }
                 h3{
-                    margin: 1.5rem;
-                    font-size: 2rem;
-                    color: $white;
+                    a{
+                        margin: 1.5rem;
+                        font-size: 2rem;
+                        color: $white;
+                    }
                 }
                 p{
                     line-height: 2;
@@ -276,14 +281,17 @@ html{
                         color: $black;
                         text-align: center;
                         &:hover{
+                            
                             background-color: $green;
                             color: $white;
                         }
                     }
+                    
                 }
-                &:hover.share{
-                    left: 2rem;
+                &:hover .share{
+                    left: 5rem;
                 }
+                
                 h3{
                     margin-top: 1.5rem;
                     font-size: 2rem;
@@ -302,6 +310,7 @@ html{
             .slide{
                 /* width: 35rem; */
                 border-radius: 0.5rem;
+                border: 2px solid $borderBlack;
                 background-color: $light-bg;
                 padding: 2rem;
                 margin-bottom: 4rem;

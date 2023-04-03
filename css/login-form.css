@@ -1,1 +1,163 @@
-/*# sourceMappingURL=login-form.css.map */
+@font-face {
+  font-family: "amin";
+  src: url(../fonts/amin.ttf) format("truetype");
+}
+@font-face {
+  font-family: "sultan";
+  src: url(../fonts/Sultan\ Adan\ 2Line\ .ttf) format("truetype");
+}
+body {
+  direction: rtl;
+  background-color: #3d3d3d;
+}
+body section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.home-btn {
+  position: fixed;
+  top: 4%;
+  left: 3%;
+  z-index: 1000;
+  font-size: 2.5rem;
+  box-shadow: 0px 0px 20px -6px #fff;
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 20%;
+  background-color: #3d3d3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-btn:hover {
+  background-color: #00E77F;
+}
+.home-btn i {
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "amin";
+}
+
+body {
+  direction: rtl;
+}
+body .form-container {
+  width: 100%;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+}
+body .form-container form {
+  display: block;
+  margin: auto;
+  width: 400px;
+  background-color: #4b4b4b;
+  border-radius: 10px;
+  box-shadow: 4px 4px 20px rgba(122, 122, 122, 0.3);
+  padding: 50px 35px;
+}
+body .form-container form h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #fff;
+}
+body .form-container form label {
+  display: block;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+body .form-container form input {
+  outline: none;
+  border: none;
+  width: 100%;
+  background-color: #aaa;
+  border-radius: 4px;
+  padding: 15px 10px;
+  margin-top: 8px;
+  font-weight: 100;
+}
+body .form-container form .pass {
+  position: relative;
+}
+body .form-container form .pass i {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+body .form-container form #show-hide {
+  font-size: 1rem;
+}
+body .form-container form button {
+  margin-top: 30px;
+  width: 100%;
+  background-color: #fff;
+  padding: 15px 0;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.1s;
+}
+body .form-container form button:hover {
+  background-color: #00E77F;
+  color: #fff;
+}
+body .form-container form hr {
+  margin-top: 20px;
+  height: 1px;
+  background-color: #fff;
+  border: none;
+  outline: #00E77F;
+}
+body .form-container form .social-countainer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+body .form-container form .social-countainer h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+body .form-container form .social-countainer .social {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+body .form-container form .social-countainer .social div {
+  background-color: #fff;
+  width: 150px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 1px 5px;
+  margin: 0 14px;
+  cursor: pointer;
+}
+body .form-container form .social-countainer .social div:hover {
+  background-color: #00E77F;
+}
+body .form-container form .social-countainer .social div:hover a i {
+  color: #fff;
+}
+body .form-container form .social-countainer .social div a {
+  text-decoration: none;
+  color: #4b4b4b;
+}
+body .form-container form .social-countainer .social div a i {
+  margin-right: 4px;
+}
+
+@media screen and (max-width: 462) {
+  form {
+    width: 100%;
+  }
+}/*# sourceMappingURL=login-form.css.map */

@@ -1,13 +1,56 @@
 const $ = document;
 
+let online = $.getElementById('online')
+
+let courseWrapper = $.querySelector(".course-wraper")
+
 let menuBtn = $.getElementById('menu-btn');
 let navbar = $.querySelector('.header .flex .navbar');
 
 menuBtn.onclick = () =>{
-    menuBtn.classList.toggle('fa-times');
-    navbar.classList.toggle('active');
+  menuBtn.classList.toggle('fa-times');
+  navbar.classList.toggle('active');
 }
 
+//--------------------------------------------
+
+function createCourses(jsData){
+  jsData.courses.forEach(course =>{
+    courseWrapper.insertAdjacentHTML("beforeend",
+    `<div class="course-slide swiper-slide">
+      <img src="${course.course_image}" alt="">
+      <h3><a href="pages/courses.html?course_title=${course.course_title}">${course.course_title}</a></h3>
+      <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و </p>
+    </div>`
+    )
+  });
+}
+//----------------------------------------------
+document.addEventListener('DOMContentLoaded', function(){
+  fetch("../json/x.json").then  (res => res.json())
+  .then(res=> loadData ( res))
+
+});
+
+function loadData ( res){
+  console.log('loaddData')
+  createCourses(res)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------------------------------------------
 // swiper with link
 // var swiper = new Swiper(".course-slider", {
 //     pagination: {

@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "amin";
+  src: url(../fonts/amin.ttf) format("truetype");
+}
+@font-face {
+  font-family: "sultan";
+  src: url(../fonts/Sultan\ Adan\ 2Line\ .ttf) format("truetype");
+}
+body {
+  direction: rtl;
+  background-color: #3d3d3d;
+}
+body section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.home-btn {
+  position: fixed;
+  top: 4%;
+  left: 3%;
+  z-index: 1000;
+  font-size: 2.5rem;
+  box-shadow: 0px 0px 20px -6px #fff;
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 20%;
+  background-color: #3d3d3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-btn:hover {
+  background-color: #00E77F;
+}
+.home-btn i {
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}/*# sourceMappingURL=courses.css.map */

@@ -1,0 +1,125 @@
+@import "main.scss";
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'amin';
+}
+body{
+    direction: rtl;
+    .form-container{
+        width: 100%;
+        padding: 50px 20px;
+        display: flex;
+        justify-content: center;
+        form{
+            display: block;
+            margin: auto;
+            width: 400px;
+            background-color: $light-bg;
+            border-radius: 10px;
+            box-shadow: $box-shadow-white;
+            padding: 50px 35px;
+            h3{
+                font-size: 1.5rem;
+                text-align: center;
+                color: $white;
+            }
+            label{
+                display: block;
+                margin-top: 2rem;
+                font-size: 1rem;
+            }
+            input{
+                outline: none;
+                border: none;
+                width: 100%;
+                background-color: $light-white;
+                border-radius: 4px;
+                padding: 15px 10px;
+                margin-top: 8px;
+                font-weight: 100;
+            }
+            .pass{
+                position: relative;
+                i{
+                    position: absolute;
+                    top: 50%;
+                    left: 20px;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+                }
+            }
+            #show-hide{
+                font-size: 1rem;
+            }
+            button{
+                margin-top: 30px;
+                width: 100%;
+                background-color: $white;
+                padding: 15px 0;
+                font-size: 1.2rem;
+                border-radius: 5px;
+                cursor: pointer;
+                border: none;
+                transition: all 0.1s;
+                &:hover{
+                    background-color: $green;
+                    color: $white;
+                }
+            }
+            hr{
+                margin-top: 20px;
+                height: 1px;
+                background-color: $white;
+                border: none;
+                outline: $green;
+            }
+            .social-countainer{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                h3{
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+                .social{
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    div{
+                        background-color: $white;
+                        width: 150px;
+                        border-radius: 5px;
+                        text-align: center;
+                        padding: 1px 5px;
+                        margin: 0 14px;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: $green;
+                        }
+                        &:hover a i{
+                            color: $white;
+                        }
+                        a{
+                            text-decoration: none;
+                            color: $light-bg;
+                            i{
+                                margin-right: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//-------------------
+@media screen and (max-width:462){
+    form{
+        width: 100%;
+    }
+}

@@ -1,0 +1,34 @@
+{
+   "courses": [
+    {
+        "course_id": 1,
+        "course_title": "مهارت Speaking",
+        "course_content": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، ",
+        "course_image": "images/grapy-young-men-discussing-a-startup.png"
+    },
+    {
+        "course_id": 2,
+        "course_title": "English for Business",
+        "course_content": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، ",
+        "course_image": "images/grapy-colleagues-discussing-analytics-at-work.png"
+    },
+    {
+        "course_id": 3,
+        "course_title": "ریاضی به انگلیسی",
+        "course_content": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، ",
+        "course_image": "images/grapy-boy-studying-and-teacher-explaining-lesson-in-classroom.png"
+    },
+    {
+        "course_id": 4,
+        "course_title": "504 Words",
+        "course_content": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، ",
+        "course_image": "images/grapy-man-studies-online-1.png"
+    }
+   ],
+   "teachers":[
+
+   ],
+   "students":[
+
+   ] 
+}

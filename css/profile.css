@@ -1,10 +1,43 @@
+@font-face {
+  font-family: "amin";
+  src: url(../fonts/amin.ttf) format("truetype");
+}
+@font-face {
+  font-family: "sultan";
+  src: url(../fonts/Sultan\ Adan\ 2Line\ .ttf) format("truetype");
+}
 body {
+  direction: rtl;
   background-color: #3d3d3d;
 }
 body section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+.home-btn {
+  position: fixed;
+  top: 4%;
+  left: 3%;
+  z-index: 1000;
+  font-size: 2.5rem;
+  box-shadow: 0px 0px 20px -6px #fff;
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 20%;
+  background-color: #3d3d3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-btn:hover {
+  background-color: #00E77F;
+}
+.home-btn i {
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
 }
 
 * {
@@ -62,29 +95,6 @@ main {
   align-items: center;
   justify-content: center;
 }
-main .home-btn {
-  position: fixed;
-  top: 4%;
-  left: 3%;
-  z-index: 1000;
-  font-size: 2.5rem;
-  box-shadow: 0px 0px 20px -6px #fff;
-  height: 4.5rem;
-  width: 4.5rem;
-  border-radius: 20%;
-  background-color: #3d3d3d;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-main .home-btn:hover {
-  background-color: #00E77F;
-}
-main .home-btn i {
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-}
 main .Profile-wraper {
   background: #4e4e4e;
   box-shadow: 0px 0px 20px -6px #3d3d3d;
@@ -127,7 +137,7 @@ main .Profile-wraper .dashboard .links .link h2 {
 }
 main .Profile-wraper .dashboard .pro {
   background: linear-gradient(to right top, #4b4b4b, #4b4b4b);
-  box-shadow: 0px 0px 20px -6px #aaa;
+  box-shadow: 4px 4px 20px rgba(122, 122, 122, 0.3);
   border-radius: 2rem;
   padding: 1rem;
   position: relative;
