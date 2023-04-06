@@ -26,9 +26,44 @@
     }
    ],
    "teachers":[
-
+        {
+            "teacher_id": 1,
+            "teacher_name": "Narta",
+            "teacher_image": "images/undraw_female_avatar_efig.svg"
+        },{
+            "teacher_id": 2,
+            "teacher_name": "Bita",
+            "teacher_image": "images/undraw_male_avatar_g98d.svg"
+        },{
+            "teacher_id": 3,
+            "teacher_name": "Nasrin",
+            "teacher_image": "images/undraw_profile_pic_re_iwgo.svg"
+        },{
+            "teacher_id": 4,
+            "teacher_name": "Hana",
+            "teacher_image": "images/undraw_pic_profile_re_7g2h.svg"
+        }
    ],
    "students":[
-
+        {
+            "student_id": 1,
+            "student_name": "Tina",
+            "student_image": "images/student/casual-life-3d-young-woman-working-on-laptop-and-showing-v-sign.png"
+        },
+        {
+            "student_id": 2,
+            "student_name": "Rita",
+            "student_image": "images/student/casual-life-3d-young-man-surrounded-by-gadgets-taking-notes.png"
+        },
+        {
+            "student_id": 3,
+            "student_name": "Vida",
+            "student_image": "images/student/3d-casual-life-young-woman-sitting-in-front-of-laptop-and-having-an-idea-1.png"
+        },
+        {
+            "student_id": 4,
+            "student_name": "Hoda",
+            "student_image": "images/student/casual-life-3d-young-woman-looking-at-laptop-and-taking-notes-in-notebook.png"
+        }
    ] 
 }

@@ -2,7 +2,10 @@ const $ = document;
 
 let online = $.getElementById('online')
 
-let courseWrapper = $.querySelector(".course-wraper")
+let courseWrapper = $.querySelector("#course-wraper")
+let teachersWrapper = $.querySelector("#teachers-wrapper")
+let studentsWrapper = $.querySelector("#students-wrapper")
+
 
 let menuBtn = $.getElementById('menu-btn');
 let navbar = $.querySelector('.header .flex .navbar');
@@ -25,6 +28,48 @@ function createCourses(jsData){
     )
   });
 }
+
+function createTeachers(jsData){
+  jsData.teachers.forEach(teacher =>{
+    teachersWrapper.insertAdjacentHTML("beforeend",
+    `<div class="swiper-slide slide">
+        <img src="${teacher.teacher_image}" alt="">
+        <div class="share">
+          <a href="" class="fab fa-instagram"></a>
+          <a href="" class="fab fa-telegram"></a>
+          <a href="" class="fab fa-whatsapp"></a>
+          <a href="" class="fab fa-linkedin"></a>
+        </div>
+        <h3>${teacher.teacher_name}</h3>
+      </div>`
+    )
+  })
+}
+
+function createStudents(jsData){
+  jsData.students.forEach(student =>{
+    studentsWrapper.insertAdjacentHTML("beforeend",
+      `<div class="swiper-slide slide">
+        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، 
+            و با استفاده از طراحان گرافیک است، چاپگرها و 
+        </p>
+        <div class="user">
+            <img src="${student.student_image}" alt="">
+            <div class="user-info">
+                <h3>${student.student_name}</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+        </div>
+      </div>`
+    )
+  })
+}
 //----------------------------------------------
 document.addEventListener('DOMContentLoaded', function(){
   fetch("../json/x.json").then  (res => res.json())
@@ -33,8 +78,10 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 function loadData ( res){
-  console.log('loaddData')
-  createCourses(res)
+  console.log('loaddData');
+  createCourses(res);
+  createTeachers(res);
+  createStudents(res);
 }
 
 
