@@ -1,6 +1,15 @@
 const $ = document;
 
-let online = $.getElementById('online')
+// let online = $.querySelector('#online')
+// function darkLight(){
+//   let color = document.documentElement.style.getPropertyValue(`${$violet0}`)
+//   console.log('dark');
+//   console.log(color);
+// }
+// online.addEventListener('click', darkLight)
+
+const switchElem = $.querySelector("#switch")
+
 
 let courseWrapper = $.querySelector("#course-wraper")
 let teachersWrapper = $.querySelector("#teachers-wrapper")
@@ -9,6 +18,10 @@ let studentsWrapper = $.querySelector("#students-wrapper")
 
 let menuBtn = $.getElementById('menu-btn');
 let navbar = $.querySelector('.header .flex .navbar');
+
+// let sElem = getComputedStyle(menuBtn)
+//   console.log(sElem);
+  
 
 menuBtn.onclick = () =>{
   menuBtn.classList.toggle('fa-times');
@@ -38,7 +51,6 @@ function createTeachers(jsData){
           <a href="" class="fab fa-instagram"></a>
           <a href="" class="fab fa-telegram"></a>
           <a href="" class="fab fa-whatsapp"></a>
-          <a href="" class="fab fa-linkedin"></a>
         </div>
         <h3>${teacher.teacher_name}</h3>
       </div>`
@@ -74,6 +86,9 @@ function createStudents(jsData){
 document.addEventListener('DOMContentLoaded', function(){
   fetch("../json/x.json").then  (res => res.json())
   .then(res=> loadData ( res))
+  
+
+  
 
 });
 
@@ -82,6 +97,14 @@ function loadData ( res){
   createCourses(res);
   createTeachers(res);
   createStudents(res);
+
+  
+  // $.querySelectorAll('.swiper-pagination-bullet').forEach( item => {
+  //   item.style.backgroundColor = 'white';
+  // }) 
+  // $.querySelectorAll('.swiper-pagination-bullet-active').forEach(item=>{
+  //   item.style.backgroundColor = '#00E77F';
+  // })
 }
 
 
@@ -99,11 +122,6 @@ function loadData ( res){
 
 //----------------------------------------------------------
 // swiper with link
-// var swiper = new Swiper(".course-slider", {
-//     pagination: {
-//       el: ".swiper-pagination",
-//     },
-// });
 var swiper = new Swiper(".course-slider", {
     // slidesPerView: 1,
     spaceBetween: 10,
@@ -172,12 +190,13 @@ var swiper = new Swiper(".teachers-slider", {
   });
 
   //------------------------------
-  window.onload = ()=>{
-    $.querySelectorAll('.swiper-pagination-bullet').forEach( item => {
-        item.style.backgroundColor = 'white';
-    }) 
-    $.querySelectorAll('.swiper-pagination-bullet-active').forEach(item=>{
-        item.style.backgroundColor = '#00E77F';
-    })
-  }
+  // window.onload = ()=>{
+  //   $.querySelectorAll('.swiper-pagination-bullet').forEach( item => {
+  //       item.style.backgroundColor = 'white';
+  //   }) 
+  //   $.querySelectorAll('.swiper-pagination-bullet-active').forEach(item=>{
+  //       item.style.backgroundColor = '#00E77F';
+  //   })
+  // }
+ 
   //------------------------------

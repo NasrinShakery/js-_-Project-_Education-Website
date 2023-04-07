@@ -9,7 +9,6 @@
 }
 body {
   direction: rtl;
-  background-color: #3d3d3d;
 }
 body section {
   max-width: 1200px;
@@ -27,7 +26,7 @@ body section {
   height: 4.5rem;
   width: 4.5rem;
   border-radius: 20%;
-  background-color: #3d3d3d;
+  background-color: #5a189a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,7 +68,7 @@ html {
   display: inline-block;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  background-color: #4b4b4b;
+  background-color: #9d4edd;
   font-size: 1.8rem;
   color: #fff;
   padding: 1rem 3rem;
@@ -78,15 +77,15 @@ html {
 }
 
 .btn:hover {
-  background-color: #fff;
-  color: #3d3d3d;
+  background-color: #e0aaff;
+  color: #5a189a;
 }
 
 .heading {
   margin-bottom: 2.5rem;
   text-align: center;
   font-size: 4rem;
-  color: #fff;
+  color: #c4aaff;
   text-transform: uppercase;
 }
 .heading span {
@@ -95,7 +94,7 @@ html {
 }
 
 .header {
-  background-color: #4b4b4b;
+  background-color: #7b2cbf;
   position: fixed;
   top: 0;
   left: 0;
@@ -145,12 +144,14 @@ html {
 }
 .home .row .content h3 {
   margin-bottom: 1rem;
+  margin-top: 1rem;
   font-size: 10rem;
-  color: #fff;
+  color: #e0aaff;
   line-height: 1;
 }
 .home .row .content h3 span {
   color: #00E77F;
+  text-shadow: 2px 2px #020202;
 }
 .home .row .img {
   flex: 1 1 40rem;
@@ -167,7 +168,7 @@ html {
   align-items: flex-start;
 }
 .count .box-container .box {
-  background-color: #4b4b4b;
+  background-color: #c4aaff;
   border-radius: 0.5rem;
   border: 2px solid #020202;
   padding: 2rem;
@@ -177,8 +178,9 @@ html {
   gap: 2.5rem;
 }
 .count .box-container .box i {
-  font-size: 5rem;
+  font-size: 4.5rem;
   color: #00E77F;
+  text-shadow: 2px 2px #020202;
 }
 .count .box-container .box .content h3 {
   font-size: 2rem;
@@ -187,7 +189,7 @@ html {
 }
 .count .box-container .box .content p {
   font-size: 1.6rem;
-  color: #aaa;
+  color: #5a189a;
 }
 
 .about .row {
@@ -221,7 +223,7 @@ html {
   border: 2px solid #020202;
   border-radius: 0.5rem;
   /* width: 30rem; */
-  background-color: #4b4b4b;
+  background-color: #c4aaff;
   text-align: center;
   padding: 2rem;
   margin-bottom: 4rem;
@@ -241,7 +243,7 @@ html {
 .courses .course-slider .swiper-wrapper .course-slide p {
   line-height: 2;
   font-size: 1.6rem;
-  color: #aaa;
+  color: #5a189a;
 }
 
 .swiper-pagination-bullet {
@@ -257,19 +259,22 @@ html {
   /* width: 40rem; */
   overflow: hidden;
   margin-bottom: 4rem;
+  padding-top: 2rem;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  border: 1px solid #020202;
+  border-radius: 0.5rem;
+  background-color: #c4aaff;
 }
 .teachers .teachers-slider .swiper-wrapper .slide img {
   height: 20rem;
   width: 100%;
   /* object-fit: cover; */
-  border-radius: 0.5rem;
 }
 .teachers .teachers-slider .swiper-wrapper .slide .share {
   position: absolute;
-  top: 1rem;
+  top: 4rem;
   left: -10rem;
 }
 .teachers .teachers-slider .swiper-wrapper .slide .share a {
@@ -289,7 +294,7 @@ html {
   color: #fff;
 }
 .teachers .teachers-slider .swiper-wrapper .slide:hover .share {
-  left: 5rem;
+  left: 3.5rem;
 }
 .teachers .teachers-slider .swiper-wrapper .slide h3 {
   margin-top: 1.5rem;
@@ -302,7 +307,7 @@ html {
   /* width: 35rem; */
   border-radius: 0.5rem;
   border: 2px solid #020202;
-  background-color: #4b4b4b;
+  background-color: #c4aaff;
   padding: 2rem;
   margin-bottom: 4rem;
   -webkit-user-select: none;
@@ -312,7 +317,7 @@ html {
 .reviwes .reviews-slider .swiper-wrapper .slide p {
   line-height: 2;
   font-size: 1.6rem;
-  color: #aaa;
+  color: #5a189a;
 }
 .reviwes .reviews-slider .swiper-wrapper .slide .user {
   display: flex;
@@ -357,7 +362,7 @@ html {
   margin-top: 1rem;
   margin-bottom: 2rem;
   border-radius: 0.5rem;
-  background-color: #4b4b4b;
+  background-color: #c4aaff;
   font-size: 1.8rem;
   color: #fff;
   padding: 1.4rem;
@@ -373,7 +378,7 @@ html {
 }
 .contact .row form .radio label {
   font-size: 1.6rem;
-  color: #aaa;
+  color: #c4aaff;
   margin-left: 0.5rem;
   cursor: pointer;
 }
@@ -392,7 +397,7 @@ html {
           appearance: none;
   height: 2rem;
   width: 2rem;
-  background-color: #aaa;
+  background-color: #c4aaff;
   cursor: pointer;
 }
 .contact .row form .radio input:checked {
@@ -401,7 +406,7 @@ html {
 }
 
 .footer {
-  background-color: #4b4b4b;
+  background-color: #9d4edd;
   text-align: center;
 }
 .footer .share a {
@@ -412,7 +417,7 @@ html {
   border-radius: 50%;
   font-size: 2rem;
   color: #fff;
-  background-color: #3d3d3d;
+  background-color: #c4aaff;
   text-align: center;
 }
 .footer .share a:hover {
@@ -455,7 +460,7 @@ html {
     right: 0;
     border-top: 0.1rem solid #aaa;
     border-bottom: 0.1rem solid #aaa;
-    background-color: #4b4b4b;
+    background-color: #7b2cbf;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
@@ -465,6 +470,7 @@ html {
   }
   .header .flex .navbar a {
     display: block;
+    text-align: center;
     margin: 2rem;
   }
   .home .row .content h3 {
@@ -485,5 +491,6 @@ html {
   }
   .heading {
     font-size: 3rem;
+    color: dd;
   }
 }/*# sourceMappingURL=style.css.map */

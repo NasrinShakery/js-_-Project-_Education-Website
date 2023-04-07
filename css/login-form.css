@@ -8,7 +8,6 @@
 }
 body {
   direction: rtl;
-  background-color: #3d3d3d;
 }
 body section {
   max-width: 1200px;
@@ -26,7 +25,7 @@ body section {
   height: 4.5rem;
   width: 4.5rem;
   border-radius: 20%;
-  background-color: #3d3d3d;
+  background-color: #5a189a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,7 +59,8 @@ body .form-container form {
   display: block;
   margin: auto;
   width: 400px;
-  background-color: #4b4b4b;
+  background-color: #c4aaff;
+  border: 1px solid #020202;
   border-radius: 10px;
   box-shadow: 4px 4px 20px rgba(122, 122, 122, 0.3);
   padding: 50px 35px;
@@ -79,7 +79,8 @@ body .form-container form input {
   outline: none;
   border: none;
   width: 100%;
-  background-color: #aaa;
+  background-color: #e0aaff;
+  border: 1px solid #020202;
   border-radius: 4px;
   padding: 15px 10px;
   margin-top: 8px;
@@ -101,12 +102,12 @@ body .form-container form #show-hide {
 body .form-container form button {
   margin-top: 30px;
   width: 100%;
-  background-color: #fff;
+  background-color: #9d4edd;
   padding: 15px 0;
   font-size: 1.2rem;
   border-radius: 5px;
   cursor: pointer;
-  border: none;
+  border: 1px solid #020202;
   transition: all 0.1s;
 }
 body .form-container form button:hover {
@@ -134,8 +135,9 @@ body .form-container form .social-countainer .social {
   width: 100%;
 }
 body .form-container form .social-countainer .social div {
-  background-color: #fff;
+  background-color: #c77dff;
   width: 150px;
+  border: 1px solid #020202;
   border-radius: 5px;
   text-align: center;
   padding: 1px 5px;
@@ -150,7 +152,7 @@ body .form-container form .social-countainer .social div:hover a i {
 }
 body .form-container form .social-countainer .social div a {
   text-decoration: none;
-  color: #4b4b4b;
+  color: #5a189a;
 }
 body .form-container form .social-countainer .social div a i {
   margin-right: 4px;

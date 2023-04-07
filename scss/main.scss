@@ -8,20 +8,32 @@
     src: url(../fonts/Sultan\ Adan\ 2Line\ .ttf) format('truetype')
 } 
 
+//---------------------------------------------------------------
+
+
+
+//--------------------------------------------------------------
+$violet4: #5a189a;
+$violet3: #7b2cbf;
+$violet2:#9d4edd;
+$violet1:#c77dff;
+$violet0: #e0aaff;
+$violet-bg: #c4aaff;
 $green:#00E77F;
 $white: #fff;
 $light-white:#aaa;
-$light-bg:#4b4b4b;
-$dark-bg:#4e4e4e;
+// $light-bg:#4b4b4b;
+// $dark-bg:#4e4e4e;
 $black:#3d3d3d;
 $borderBlack:#020202;
+$border: 1px solid $borderBlack;
 $white-shadow: rgba(122,122,122,0.3);
 $box-shadow-white: 4px 4px 20px rgba(122,122,122,0.3);
 
 //-----------------------------
 body{
     direction: rtl;
-    background-color: $black;
+    // background-color: $black;
     section{
         max-width: 1200px;
         margin: 0 auto;
@@ -38,7 +50,7 @@ body{
     height: 4.5rem;
     width: 4.5rem;
     border-radius: 20%;
-    background-color: $black;
+    background-color: $violet4;
     display: flex;
     align-items: center;
     justify-content: center;

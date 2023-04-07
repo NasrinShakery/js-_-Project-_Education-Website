@@ -20,7 +20,8 @@ body{
             display: block;
             margin: auto;
             width: 400px;
-            background-color: $light-bg;
+            background-color: $violet-bg;
+            border: $border;
             border-radius: 10px;
             box-shadow: $box-shadow-white;
             padding: 50px 35px;
@@ -38,7 +39,8 @@ body{
                 outline: none;
                 border: none;
                 width: 100%;
-                background-color: $light-white;
+                background-color: $violet0;
+                border: $border;
                 border-radius: 4px;
                 padding: 15px 10px;
                 margin-top: 8px;
@@ -60,12 +62,12 @@ body{
             button{
                 margin-top: 30px;
                 width: 100%;
-                background-color: $white;
+                background-color: $violet2;
                 padding: 15px 0;
                 font-size: 1.2rem;
                 border-radius: 5px;
                 cursor: pointer;
-                border: none;
+                border: $border;
                 transition: all 0.1s;
                 &:hover{
                     background-color: $green;
@@ -91,8 +93,9 @@ body{
                     justify-content: center;
                     width: 100%;
                     div{
-                        background-color: $white;
+                        background-color: $violet1;
                         width: 150px;
+                        border: $border;
                         border-radius: 5px;
                         text-align: center;
                         padding: 1px 5px;
@@ -106,7 +109,7 @@ body{
                         }
                         a{
                             text-decoration: none;
-                            color: $light-bg;
+                            color: $violet4;
                             i{
                                 margin-right: 4px;
                             }
