@@ -9,7 +9,14 @@ const $ = document;
 // online.addEventListener('click', darkLight)
 
 const switchElem = $.querySelector("#switch")
-
+switchElem.addEventListener("click", function(){
+  $.body.classList.toggle("dark");
+  if ($.body.className.includes("dark")) {
+    localStorage.setItem("theme", "dark")
+  }else{
+    localStorage.setItem("theme", "light")
+  }
+})
 
 let courseWrapper = $.querySelector("#course-wraper")
 let teachersWrapper = $.querySelector("#teachers-wrapper")
@@ -85,15 +92,20 @@ function createStudents(jsData){
 //----------------------------------------------
 document.addEventListener('DOMContentLoaded', function(){
   fetch("../json/x.json").then  (res => res.json())
-  .then(res=> loadData ( res))
+  .then(res=> loadData(res))
   
+  let theme = localStorage.getItem("theme")
+  if (theme === "dark") {
+    document.body.classList.add('dark')
+    console.log(theme);
+  }
 
   
 
 });
 
-function loadData ( res){
-  console.log('loaddData');
+function loadData (res){
+  console.log('load...Data');
   createCourses(res);
   createTeachers(res);
   createStudents(res);

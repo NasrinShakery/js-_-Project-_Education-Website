@@ -68,6 +68,91 @@ html{
     }
 }
 
+//---------------Dark Mood------------------------
+body.dark{
+    background-color: $black;
+    transition: .3s;
+    .header{
+        background-color: $light-bg;
+        .flex{
+            #switch{
+                background-color: $black;
+                .flicker {
+                    transform: translateX(4rem);
+                  }
+            }
+        }
+    }
+    .count{
+        .box-container{
+            .box{
+                background-color: $light-bg;
+                .content{
+                    p{
+                        color: $light-white;
+                    }
+                }
+            }
+        }
+    }
+    .courses{
+        .course-slider{
+            .course-slide{
+                background-color: $light-bg;
+                p{
+                    color: $light-white;
+                }
+            }
+        } 
+    }
+    .teachers{
+        .teachers-slider{
+            .slide{
+                background-color: transparent;
+                border: none;
+            }
+        }
+    }
+    .reviwes{
+        .reviews-slider{
+            #students-wrapper{
+                .slide{
+                    background-color: $light-bg;
+                    p{
+                        color: $light-white;
+                    }
+                }
+            }
+            
+        }
+    }
+    .contact{
+        form{
+            .box{
+                background-color: $light-bg;
+            }
+            .radio{
+                label{
+                    color: $light-white;
+                }
+                input{
+                    background-color: $light-white;
+                }
+            }
+        }
+    }
+    .footer{
+        background-color: $light-bg;
+        .share{
+            a{
+                background-color: $black;
+                &:hover{
+                    background-color: $green;
+                }
+            }
+        }
+    }
+}
 // -------------Header------------------
 .header{
     background-color: $violet3;
@@ -81,10 +166,6 @@ html{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        .logo{
-            font-size: 2.5rem;
-            color: $white;
-        }
         .navbar{
             a{
                 margin-left: 2rem;
@@ -101,6 +182,36 @@ html{
             font-size: 2.5rem;
             display: none;
         }
+        //----- Dark & Light Mood ----
+        // #switch{
+        //     width: 8rem;
+        //     height: 4rem;
+        //     background-color: $violet4;
+        //     border-radius: 2rem;
+        //     position: relative;
+        //     .flicker{
+        //         background-color: $white;
+        //         width: 3rem;
+        //         height: 3rem;
+        //         border-radius: 1.5rem;
+        //         position: absolute;
+        //         top: .5rem;
+        //         left: .5rem;
+        //         transition: .3s;
+        //         box-shadow: inset 4px 4px 4px rgb(255, 255, 255),
+        //                     inset -4px -4px 4px rgb(195 193 198 / 90%);
+        //     }
+        //     .moon{
+        //         width: 2rem;
+        //         height: 2rem;
+        //         border-radius: 1rem;
+        //         box-shadow: 4px 4px 0 0 $white;
+        //         position: absolute;
+        //         top: .5rem;
+        //         left: 4.5rem;
+        //     }
+        // }
+        @include switchMood ();
     }
 }
 // ----------------Home--------------------
@@ -306,7 +417,7 @@ html{
 //---------------------Reviwes-------------------------
 .reviwes{
     .reviews-slider{
-        .swiper-wrapper{
+        #students-wrapper{
             .slide{
                 /* width: 35rem; */
                 border-radius: 0.5rem;

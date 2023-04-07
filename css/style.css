@@ -93,6 +93,60 @@ html {
   color: #00E77F;
 }
 
+body.dark {
+  background-color: #3d3d3d;
+  transition: 0.3s;
+}
+body.dark .header {
+  background-color: #4b4b4b;
+}
+body.dark .header .flex #switch {
+  background-color: #3d3d3d;
+}
+body.dark .header .flex #switch .flicker {
+  transform: translateX(4rem);
+}
+body.dark .count .box-container .box {
+  background-color: #4b4b4b;
+}
+body.dark .count .box-container .box .content p {
+  color: #aaa;
+}
+body.dark .courses .course-slider .course-slide {
+  background-color: #4b4b4b;
+}
+body.dark .courses .course-slider .course-slide p {
+  color: #aaa;
+}
+body.dark .teachers .teachers-slider .slide {
+  background-color: transparent;
+  border: none;
+}
+body.dark .reviwes .reviews-slider #students-wrapper .slide {
+  background-color: #4b4b4b;
+}
+body.dark .reviwes .reviews-slider #students-wrapper .slide p {
+  color: #aaa;
+}
+body.dark .contact form .box {
+  background-color: #4b4b4b;
+}
+body.dark .contact form .radio label {
+  color: #aaa;
+}
+body.dark .contact form .radio input {
+  background-color: #aaa;
+}
+body.dark .footer {
+  background-color: #4b4b4b;
+}
+body.dark .footer .share a {
+  background-color: #3d3d3d;
+}
+body.dark .footer .share a:hover {
+  background-color: #00E77F;
+}
+
 .header {
   background-color: #7b2cbf;
   position: fixed;
@@ -107,10 +161,6 @@ html {
   align-items: center;
   justify-content: space-between;
 }
-.header .flex .logo {
-  font-size: 2.5rem;
-  color: #fff;
-}
 .header .flex .navbar a {
   margin-left: 2rem;
   color: #aaa;
@@ -124,6 +174,33 @@ html {
   color: #fff;
   font-size: 2.5rem;
   display: none;
+}
+.header .flex #switch {
+  width: 8rem;
+  height: 4rem;
+  background-color: #5a189a;
+  border-radius: 2rem;
+  position: relative;
+}
+.header .flex #switch .flicker {
+  background-color: #fff;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  transition: 0.3s;
+  box-shadow: inset 4px 4px 4px rgb(255, 255, 255), inset -4px -4px 4px rgba(195, 193, 198, 0.9);
+}
+.header .flex #switch .moon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  box-shadow: 4px 4px 0 0 #fff;
+  position: absolute;
+  top: 0.5rem;
+  left: 4.5rem;
 }
 
 .home {
@@ -303,7 +380,7 @@ html {
   text-align: center;
 }
 
-.reviwes .reviews-slider .swiper-wrapper .slide {
+.reviwes .reviews-slider #students-wrapper .slide {
   /* width: 35rem; */
   border-radius: 0.5rem;
   border: 2px solid #020202;
@@ -314,30 +391,30 @@ html {
      -moz-user-select: none;
           user-select: none;
 }
-.reviwes .reviews-slider .swiper-wrapper .slide p {
+.reviwes .reviews-slider #students-wrapper .slide p {
   line-height: 2;
   font-size: 1.6rem;
   color: #5a189a;
 }
-.reviwes .reviews-slider .swiper-wrapper .slide .user {
+.reviwes .reviews-slider #students-wrapper .slide .user {
   display: flex;
   align-items: center;
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
-.reviwes .reviews-slider .swiper-wrapper .slide .user img {
+.reviwes .reviews-slider #students-wrapper .slide .user img {
   height: 7rem;
   width: 7rem;
   /* border-radius: 50%; */
   -o-object-fit: contain;
      object-fit: contain;
 }
-.reviwes .reviews-slider .swiper-wrapper .slide .user .user-info h3 {
+.reviwes .reviews-slider #students-wrapper .slide .user .user-info h3 {
   font-size: 2rem;
   color: #fff;
   margin-bottom: 0.5rem;
 }
-.reviwes .reviews-slider .swiper-wrapper .slide .user .user-info .stars i {
+.reviwes .reviews-slider #students-wrapper .slide .user .user-info .stars i {
   font-size: 1.6rem;
   color: #00E77F;
 }

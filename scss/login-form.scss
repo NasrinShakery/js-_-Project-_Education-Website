@@ -11,6 +11,13 @@
 }
 body{
     direction: rtl;
+    #switchWrapper{
+        position: fixed;
+        top: 15%;
+        left: 1%;
+        transform: scale(.7);
+        @include switchMood ();
+    }   
     .form-container{
         width: 100%;
         padding: 50px 20px;

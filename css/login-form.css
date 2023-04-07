@@ -49,6 +49,39 @@ body section {
 body {
   direction: rtl;
 }
+body #switchWrapper {
+  position: fixed;
+  top: 15%;
+  left: 1%;
+  transform: scale(0.7);
+}
+body #switchWrapper #switch {
+  width: 8rem;
+  height: 4rem;
+  background-color: #5a189a;
+  border-radius: 2rem;
+  position: relative;
+}
+body #switchWrapper #switch .flicker {
+  background-color: #fff;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  transition: 0.3s;
+  box-shadow: inset 4px 4px 4px rgb(255, 255, 255), inset -4px -4px 4px rgba(195, 193, 198, 0.9);
+}
+body #switchWrapper #switch .moon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  box-shadow: 4px 4px 0 0 #fff;
+  position: absolute;
+  top: 0.5rem;
+  left: 4.5rem;
+}
 body .form-container {
   width: 100%;
   padding: 50px 20px;
