@@ -1,5 +1,162 @@
 @import "main.scss";
 
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+}
+
 body{
+    font-family: 'amin';
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s linear;
+    text-transform: capitalize;
+}
+
+// -------------Header------------------
+.header{
+    background-color: $violet3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    .flex{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .navbar{
+            a{
+                text-decoration: none;
+                margin-left: 2rem;
+                color: $light-white;
+                font-size: 2rem;
+                &:hover{
+                    color: $green;
+                }
+            }
+        }
+        #menu-btn{
+            cursor: pointer;
+            color: $white;
+            font-size: 2.5rem;
+            display: none;
+        }
+        @include switchMood ();
+    }
+}
+#main{
+    margin-top: 8rem;
+    align-items: center;
+    h1{
+        text-align: center;
+        color: $green;
+        font-size: 3rem;
+    }
+    .course-wrapper{
+        background-color: yellow;
+        // margin-top: 10rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.5rem;
+        .course{
+            background-color: $violet-bg;
+            width: 22rem;
+            height: 30rem;
+            border-radius: 2rem;
+            align-items: center;
+            #imgBox{
+                img{
+                    display: block;
+                    margin: 0 auto;
+                    width: 90%;
+                }
+            }
+            .course-title{
+                text-align: center;
+                font-size: 2rem;
+                margin: 0;
+
+                a{
+                    color: $white;
+                    text-decoration: none;
+                }
+            }
+            p{
+                text-align: center;
+                padding: 1rem;
+            }
+
+        }
     
+    }
+}
+
+//------ Footer ---------
+.footer{
+    background-color: $violet2;
+    text-align: center;
+    .share{
+        a{
+            margin: 0 0.3rem;
+            height: 4.5rem;
+            width: 4.5rem;
+            line-height: 4.5rem;
+            border-radius: 50%;
+            font-size: 2rem;
+            color: $white;
+            background-color: $violet-bg;
+            text-align: center;
+            &:hover{
+                background-color: $green;
+            }
+        }
+    }
+    .credit{
+        /* text-align: center; */
+        margin-top: 2.5rem;
+        padding: 1.5rem;
+        border-top: 0.1rem solid $light-white;
+        font-size: 2rem;
+        color: $light-white;
+        span{
+            color: $green;
+        }
+    }
+}
+//---------------------
+
+
+
+body.dark{
+    background-color: $black;
+    transition: .3s;
+    .header{
+        background-color: $light-bg;
+        .flex{
+            #switch{
+                background-color: $black;
+                .flicker {
+                    transform: translateX(4rem);
+                }
+            }
+        }
+    }
+    .footer{
+        background-color: $light-bg;
+        .share{
+            a{
+                background-color: $black;
+                &:hover{
+                    background-color: $green;
+                }
+            }
+        }
+    }
 }

@@ -4,25 +4,57 @@
         "course_id": 1,
         "course_title": "مهارت Speaking",
         "course_content": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، ",
-        "course_image": "images/grapy-young-men-discussing-a-startup.png"
+        "course_image": "images/grapy-young-men-discussing-a-startup.png",
+        "lessons" : [
+            {"lesson_id":"1", "lesson_name": "درس 1", "video-url":"#"},
+            {"lesson_id":"2", "lesson_name": "درس 2", "video-url":"#"},
+            {"lesson_id":"3", "lesson_name": "درس 3", "video-url":"#"},
+            {"lesson_id":"4", "lesson_name": "درس 4", "video-url":"#"},
+            {"lesson_id":"5", "lesson_name": "درس 5", "video-url":"#"},
+            {"lesson_id":"6", "lesson_name": "درس 6", "video-url":"#"}
+        ]
     },
     {
         "course_id": 2,
         "course_title": "English for Business",
         "course_content": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، ",
-        "course_image": "images/grapy-colleagues-discussing-analytics-at-work.png"
+        "course_image": "images/grapy-colleagues-discussing-analytics-at-work.png",
+        "lessons" : [
+            {"lesson_id":"1", "lesson_name": "درس 1", "video-url":"#"},
+            {"lesson_id":"2", "lesson_name": "درس 2", "video-url":"#"},
+            {"lesson_id":"3", "lesson_name": "درس 3", "video-url":"#"},
+            {"lesson_id":"4", "lesson_name": "درس 4", "video-url":"#"},
+            {"lesson_id":"5", "lesson_name": "درس 5", "video-url":"#"},
+            {"lesson_id":"6", "lesson_name": "درس 6", "video-url":"#"}
+        ]
     },
     {
         "course_id": 3,
         "course_title": "ریاضی به انگلیسی",
         "course_content": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، ",
-        "course_image": "images/grapy-boy-studying-and-teacher-explaining-lesson-in-classroom.png"
+        "course_image": "images/grapy-boy-studying-and-teacher-explaining-lesson-in-classroom.png",
+        "lessons" : [
+            {"lesson_id":"1", "lesson_name": "درس 1", "video-url":"#"},
+            {"lesson_id":"2", "lesson_name": "درس 2", "video-url":"#"},
+            {"lesson_id":"3", "lesson_name": "درس 3", "video-url":"#"},
+            {"lesson_id":"4", "lesson_name": "درس 4", "video-url":"#"},
+            {"lesson_id":"5", "lesson_name": "درس 5", "video-url":"#"},
+            {"lesson_id":"6", "lesson_name": "درس 6", "video-url":"#"}
+        ]
     },
     {
         "course_id": 4,
         "course_title": "504 Words",
         "course_content": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، ",
-        "course_image": "images/grapy-man-studies-online-1.png"
+        "course_image": "images/grapy-man-studies-online-1.png",
+        "lessons" : [
+            {"lesson_id":"1", "lesson_name": "درس 1", "video-url":"#"},
+            {"lesson_id":"2", "lesson_name": "درس 2", "video-url":"#"},
+            {"lesson_id":"3", "lesson_name": "درس 3", "video-url":"#"},
+            {"lesson_id":"4", "lesson_name": "درس 4", "video-url":"#"},
+            {"lesson_id":"5", "lesson_name": "درس 5", "video-url":"#"},
+            {"lesson_id":"6", "lesson_name": "درس 6", "video-url":"#"}
+        ]
     }
    ],
    "teachers":[
