@@ -17,13 +17,13 @@ body section {
 
 .home-btn {
   position: fixed;
-  top: 4%;
+  top: 5%;
   left: 3%;
   z-index: 1000;
   font-size: 2.5rem;
   box-shadow: 0px 0px 20px -6px #fff;
-  height: 4.5rem;
-  width: 4.5rem;
+  height: 4rem;
+  width: 4rem;
   border-radius: 20%;
   background-color: #5a189a;
   display: flex;
@@ -49,11 +49,17 @@ body section {
 body {
   direction: rtl;
 }
+body .home-btn {
+  height: 3.5rem;
+  width: 3.5rem;
+  top: 5%;
+  left: 5%;
+}
 body #switchWrapper {
   position: fixed;
   top: 15%;
-  left: 1%;
-  transform: scale(0.7);
+  left: 2%;
+  transform: scale(0.5);
 }
 body #switchWrapper #switch {
   width: 8rem;
@@ -189,6 +195,46 @@ body .form-container form .social-countainer .social div a {
 }
 body .form-container form .social-countainer .social div a i {
   margin-right: 4px;
+}
+
+body.dark {
+  background-color: #3d3d3d;
+  transition: 0.3s;
+}
+body.dark #switchWrapper #switch {
+  background-color: #4b4b4b;
+  border: 1px solid #020202;
+}
+body.dark #switchWrapper #switch .flicker {
+  transform: translateX(4rem);
+}
+body.dark .form-container form {
+  background-color: #4b4b4b;
+}
+body.dark .form-container form h3 {
+  color: #c4aaff;
+}
+body.dark .form-container form label {
+  color: #fff;
+}
+body.dark .form-container form input {
+  background-color: #aaa;
+}
+body.dark .form-container form button {
+  color: #fff;
+  background-color: #e0aaff;
+}
+body.dark .form-container form button:hover {
+  background-color: #00E77F;
+}
+body.dark .form-container form .social-countainer .social div {
+  background-color: #e0aaff;
+}
+body.dark .form-container form .social-countainer .social div:hover {
+  background-color: #00E77F;
+}
+body.dark .form-container form .social-countainer .social div:hover a i {
+  color: #fff;
 }
 
 @media screen and (max-width: 462) {

@@ -10,3 +10,27 @@ document.addEventListener('DOMContentLoaded', function(){
     
   
   });
+
+// -------------- For Dark & Light Mood ----------
+const switchElem = $.querySelector("#switch")
+switchElem.addEventListener("click", function(){
+  $.body.classList.toggle("dark");
+  if ($.body.className.includes("dark")) {
+    localStorage.setItem("theme", "dark")
+  }else{
+    localStorage.setItem("theme", "light")
+  }
+})
+document.addEventListener('DOMContentLoaded', function(){
+  // fetch("../json/x.json").then  (res => res.json())
+  // .then(res=> loadData(res))
+  
+  let theme = localStorage.getItem("theme")
+  if (theme === "dark") {
+    document.body.classList.add('dark')
+    console.log(theme);
+  }
+
+  
+
+});

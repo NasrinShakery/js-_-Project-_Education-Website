@@ -8,6 +8,7 @@ const $ = document;
 // }
 // online.addEventListener('click', darkLight)
 
+// -------------- For Dark & Light Mood ----------
 const switchElem = $.querySelector("#switch")
 switchElem.addEventListener("click", function(){
   $.body.classList.toggle("dark");
@@ -17,7 +18,18 @@ switchElem.addEventListener("click", function(){
     localStorage.setItem("theme", "light")
   }
 })
+document.addEventListener('DOMContentLoaded', function(){
+  fetch("../json/x.json").then  (res => res.json())
+  .then(res=> loadData(res))
+  
+  let theme = localStorage.getItem("theme")
+  if (theme === "dark") {
+    document.body.classList.add('dark')
+    console.log(theme);
+  }
 
+});
+//---------------------------------------------------------
 let courseWrapper = $.querySelector("#course-wraper")
 let teachersWrapper = $.querySelector("#teachers-wrapper")
 let studentsWrapper = $.querySelector("#students-wrapper")
@@ -40,7 +52,7 @@ menuBtn.onclick = () =>{
 function createCourses(jsData){
   jsData.courses.forEach(course =>{
     courseWrapper.insertAdjacentHTML("beforeend",
-    `<div class="course-slide swiper-slide">
+    `<div class="course-slide swiper-slide" >
       <img src="${course.course_image}" alt="">
       <h3><a href="pages/courses.html?course_title=${course.course_title}">${course.course_title}</a></h3>
       <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و </p>
@@ -89,20 +101,8 @@ function createStudents(jsData){
     )
   })
 }
-//----------------------------------------------
-document.addEventListener('DOMContentLoaded', function(){
-  fetch("../json/x.json").then  (res => res.json())
-  .then(res=> loadData(res))
-  
-  let theme = localStorage.getItem("theme")
-  if (theme === "dark") {
-    document.body.classList.add('dark')
-    console.log(theme);
-  }
 
-  
 
-});
 
 function loadData (res){
   console.log('load...Data');
@@ -212,3 +212,5 @@ var swiper = new Swiper(".teachers-slider", {
   // }
  
   //------------------------------
+
+  // export{switchElem}
