@@ -18,9 +18,14 @@ switchElem.addEventListener("click", function(){
     localStorage.setItem("theme", "light")
   }
 })
+//----------------------
 document.addEventListener('DOMContentLoaded', function(){
-  fetch("../json/x.json").then  (res => res.json())
-  .then(res=> loadData(res))
+  fetch("../json/x.json")
+    .then  (res => res.json())
+    .then(res=> {
+      // console.log(res);
+      loadData(res)
+    })
   
   let theme = localStorage.getItem("theme")
   if (theme === "dark") {

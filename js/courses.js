@@ -1,8 +1,23 @@
 
+const $ = document;
+let mainSection = $.querySelector("#main")
+
 document.addEventListener('DOMContentLoaded', function(){
-    const urlParams = new URLSearchParams(window.location.search)
-    const course = urlParams.get("course-title");
-    console.log(course);
+
+  let theme = localStorage.getItem("theme")
+  if (theme === "dark") {
+    document.body.classList.add('dark')
+    console.log(theme);
+  }
+
+  const urlParams = new URLSearchParams(window.location.search)
+  const course = urlParams.get("course_title");
+  console.log(course);
+  mainSection.insertAdjacentHTML("afterbegin", 
+    `
+      <h1>آموزش ${course}</h1>
+    `
+  )
 
 
 
@@ -25,11 +40,7 @@ document.addEventListener('DOMContentLoaded', function(){
   // fetch("../json/x.json").then  (res => res.json())
   // .then(res=> loadData(res))
   
-  let theme = localStorage.getItem("theme")
-  if (theme === "dark") {
-    document.body.classList.add('dark')
-    console.log(theme);
-  }
+  
 
   
 
