@@ -6,12 +6,12 @@
         "course_content": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، ",
         "course_image": "images/grapy-young-men-discussing-a-startup.png",
         "lessons" : [
-            {"lesson_id":"1", "lesson_name": "درس 1", "video-url":"#"},
-            {"lesson_id":"2", "lesson_name": "درس 2", "video-url":"#"},
-            {"lesson_id":"3", "lesson_name": "درس 3", "video-url":"#"},
-            {"lesson_id":"4", "lesson_name": "درس 4", "video-url":"#"},
-            {"lesson_id":"5", "lesson_name": "درس 5", "video-url":"#"},
-            {"lesson_id":"6", "lesson_name": "درس 6", "video-url":"#"}
+            {"lesson_id":"1", "lesson_name": "درس Speaking 1", "video-url":"#"},
+            {"lesson_id":"2", "lesson_name": "درس Speaking 2", "video-url":"#"},
+            {"lesson_id":"3", "lesson_name": "درس Speaking 3", "video-url":"#"},
+            {"lesson_id":"4", "lesson_name": "درس Speaking 4", "video-url":"#"},
+            {"lesson_id":"5", "lesson_name": "درس Speaking 5", "video-url":"#"},
+            {"lesson_id":"6", "lesson_name": "درس Speaking 6", "video-url":"#"}
         ]
     },
     {
@@ -20,12 +20,12 @@
         "course_content": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، ",
         "course_image": "images/grapy-colleagues-discussing-analytics-at-work.png",
         "lessons" : [
-            {"lesson_id":"1", "lesson_name": "درس 1", "video-url":"#"},
-            {"lesson_id":"2", "lesson_name": "درس 2", "video-url":"#"},
-            {"lesson_id":"3", "lesson_name": "درس 3", "video-url":"#"},
-            {"lesson_id":"4", "lesson_name": "درس 4", "video-url":"#"},
-            {"lesson_id":"5", "lesson_name": "درس 5", "video-url":"#"},
-            {"lesson_id":"6", "lesson_name": "درس 6", "video-url":"#"}
+            {"lesson_id":"1", "lesson_name": "درس Business 1", "video-url":"#"},
+            {"lesson_id":"2", "lesson_name": "درس Business 2", "video-url":"#"},
+            {"lesson_id":"3", "lesson_name": "درس Business 3", "video-url":"#"},
+            {"lesson_id":"4", "lesson_name": "درس Business 4", "video-url":"#"},
+            {"lesson_id":"5", "lesson_name": "درس Business 5", "video-url":"#"},
+            {"lesson_id":"6", "lesson_name": "درس Business 6", "video-url":"#"}
         ]
     },
     {
@@ -34,12 +34,12 @@
         "course_content": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، ",
         "course_image": "images/grapy-boy-studying-and-teacher-explaining-lesson-in-classroom.png",
         "lessons" : [
-            {"lesson_id":"1", "lesson_name": "درس 1", "video-url":"#"},
-            {"lesson_id":"2", "lesson_name": "درس 2", "video-url":"#"},
-            {"lesson_id":"3", "lesson_name": "درس 3", "video-url":"#"},
-            {"lesson_id":"4", "lesson_name": "درس 4", "video-url":"#"},
-            {"lesson_id":"5", "lesson_name": "درس 5", "video-url":"#"},
-            {"lesson_id":"6", "lesson_name": "درس 6", "video-url":"#"}
+            {"lesson_id":"1", "lesson_name": "درس Math 1", "video-url":"#"},
+            {"lesson_id":"2", "lesson_name": "درس Math 2", "video-url":"#"},
+            {"lesson_id":"3", "lesson_name": "درس Math 3", "video-url":"#"},
+            {"lesson_id":"4", "lesson_name": "درس Math 4", "video-url":"#"},
+            {"lesson_id":"5", "lesson_name": "درس Math 5", "video-url":"#"},
+            {"lesson_id":"6", "lesson_name": "درس Math 6", "video-url":"#"}
         ]
     },
     {
@@ -48,12 +48,12 @@
         "course_content": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، ",
         "course_image": "images/grapy-man-studies-online-1.png",
         "lessons" : [
-            {"lesson_id":"1", "lesson_name": "درس 1", "video-url":"#"},
-            {"lesson_id":"2", "lesson_name": "درس 2", "video-url":"#"},
-            {"lesson_id":"3", "lesson_name": "درس 3", "video-url":"#"},
-            {"lesson_id":"4", "lesson_name": "درس 4", "video-url":"#"},
-            {"lesson_id":"5", "lesson_name": "درس 5", "video-url":"#"},
-            {"lesson_id":"6", "lesson_name": "درس 6", "video-url":"#"}
+            {"lesson_id":"1", "lesson_name": "لغات سری 1", "video-url":"#"},
+            {"lesson_id":"2", "lesson_name": "لغات سری 2", "video-url":"#"},
+            {"lesson_id":"3", "lesson_name": "لغات سری 3", "video-url":"#"},
+            {"lesson_id":"4", "lesson_name": "لغات سری 4", "video-url":"#"},
+            {"lesson_id":"5", "lesson_name": "لغات سری 5", "video-url":"#"},
+            {"lesson_id":"6", "lesson_name": "لغات سری 6", "video-url":"#"}
         ]
     }
    ],

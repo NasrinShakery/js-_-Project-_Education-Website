@@ -53,24 +53,22 @@ body{
 }
 #main{
     margin-top: 8rem;
-    align-items: center;
+    // align-items: center;
     h1{
         text-align: center;
         color: $green;
         font-size: 3rem;
     }
     .course-wrapper{
-        background-color: yellow;
-        // margin-top: 10rem;
+        // background-color: yellow;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 0.5rem;
+        grid-template-columns:repeat(3, 1fr);
+        gap: 10rem;
         .course{
+            grid-column: span 1;
             background-color: $violet-bg;
-            width: 22rem;
-            height: 30rem;
+            width: 100%;
             border-radius: 2rem;
-            align-items: center;
             #imgBox{
                 img{
                     display: block;
