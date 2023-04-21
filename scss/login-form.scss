@@ -9,20 +9,49 @@
 }
 body {
   direction: rtl;
-  .home-btn {
-    height: 3.5rem;
-    width: 3.5rem;
-    top: 5%;
-    left: 5%;
-  }
-  #switchWrapper {
+  // -------------Header------------------
+  .header {
+    background-color: $violet3;
     position: fixed;
-    top: 15%;
-    left: 2%;
-    transform: scale(0.5);
-    @include switchMood();
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    .flex {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .navbar {
+        a {
+          text-decoration: none;
+          margin-left: 2rem;
+          color: $light-white;
+          font-size: 2rem;
+          &:hover {
+            color: $green;
+          }
+        }
+      }
+      #menu-btn {
+        cursor: pointer;
+        color: $white;
+        font-size: 2.5rem;
+        display: none;
+      }
+      .home {
+        display: flex;
+        .home-btn {
+          position: relative;
+          font-size: 1.7rem;
+          margin: 0 1.5rem;
+        }
+        @include switchMood();
+      }
+    }
   }
   .form-container {
+    margin-top: 8rem;
     width: 100%;
     padding: 50px 20px;
     display: flex;
@@ -136,12 +165,20 @@ body {
 body.dark {
   background-color: $black;
   transition: 0.3s;
-  #switchWrapper {
-    #switch {
-      background-color: $light-bg;
-      border: $border;
-      .flicker {
-        transform: translateX(4rem);
+  .header {
+    background-color: $light-bg;
+    .flex {
+      #switch {
+        background-color: $black;
+        .flicker {
+          transform: translateX(4rem);
+        }
+      }
+      .home-btn {
+        background-color: $black;
+        &:hover a i {
+          color: $green;
+        }
       }
     }
   }
@@ -181,9 +218,40 @@ body.dark {
   }
 }
 
-//-------------------
-@media screen and (max-width: 462) {
-  form {
-    width: 100%;
+//------------- media querry ------
+// @media screen and (max-width: 462) {
+//   form {
+//     width: 100%;
+//   }
+// }
+
+@media (max-width: 768px) {
+  .header {
+    .flex {
+      #menu-btn {
+        display: inline-block;
+        &.fa-times {
+          transform: rotate(180deg);
+        }
+      }
+      .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        border-top: 0.1rem solid $light-white;
+        border-bottom: 0.1rem solid $light-white;
+        background-color: $violet3;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        &.active {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+        a {
+          display: block;
+          text-align: center;
+          margin: 2rem;
+        }
+      }
+    }
   }
 }

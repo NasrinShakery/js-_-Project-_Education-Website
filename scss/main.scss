@@ -28,6 +28,22 @@ $white-shadow: rgba(122,122,122,0.3);
 $box-shadow-white: 4px 4px 20px rgba(122,122,122,0.3);
 
 //-----------------------------
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+}
+body{
+    font-family: 'amin';
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s linear;
+    text-transform: capitalize;
+}
 body{
     direction: rtl;
     // background-color: $black;

@@ -6,6 +6,25 @@
   font-family: "sultan";
   src: url(../fonts/Sultan\ Adan\ 2Line\ .ttf) format("truetype");
 }
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+}
+
+body {
+  font-family: "amin";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s linear;
+  text-transform: capitalize;
+}
+
 body {
   direction: rtl;
 }
@@ -21,8 +40,6 @@ body section {
   left: 3%;
   z-index: 1000;
   font-size: 2.5rem;
-  box-shadow: 0px 0px 20px -6px #fff;
-  height: 4rem;
   width: 4rem;
   border-radius: 20%;
   background-color: #5a189a;
@@ -33,10 +50,9 @@ body section {
 .home-btn:hover {
   background-color: #00E77F;
 }
-.home-btn i {
+.home-btn a i {
   color: #fff;
   padding: 1rem;
-  text-align: center;
 }
 
 * {
@@ -49,26 +65,51 @@ body section {
 body {
   direction: rtl;
 }
-body .home-btn {
-  height: 3.5rem;
-  width: 3.5rem;
-  top: 5%;
-  left: 5%;
-}
-body #switchWrapper {
+body .header {
+  background-color: #7b2cbf;
   position: fixed;
-  top: 15%;
-  left: 2%;
-  transform: scale(0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
-body #switchWrapper #switch {
+body .header .flex {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .header .flex .navbar a {
+  text-decoration: none;
+  margin-left: 2rem;
+  color: #aaa;
+  font-size: 2rem;
+}
+body .header .flex .navbar a:hover {
+  color: #00E77F;
+}
+body .header .flex #menu-btn {
+  cursor: pointer;
+  color: #fff;
+  font-size: 2.5rem;
+  display: none;
+}
+body .header .flex .home {
+  display: flex;
+}
+body .header .flex .home .home-btn {
+  position: relative;
+  font-size: 1.7rem;
+  margin: 0 1.5rem;
+}
+body .header .flex .home #switch {
   width: 8rem;
   height: 4rem;
   background-color: #5a189a;
   border-radius: 2rem;
   position: relative;
 }
-body #switchWrapper #switch .flicker {
+body .header .flex .home #switch .flicker {
   background-color: #fff;
   width: 3rem;
   height: 3rem;
@@ -79,7 +120,7 @@ body #switchWrapper #switch .flicker {
   transition: 0.3s;
   box-shadow: inset 4px 4px 4px rgb(255, 255, 255), inset -4px -4px 4px rgba(195, 193, 198, 0.9);
 }
-body #switchWrapper #switch .moon {
+body .header .flex .home #switch .moon {
   width: 2rem;
   height: 2rem;
   border-radius: 1rem;
@@ -89,6 +130,7 @@ body #switchWrapper #switch .moon {
   left: 4.5rem;
 }
 body .form-container {
+  margin-top: 8rem;
   width: 100%;
   padding: 50px 20px;
   display: flex;
@@ -201,12 +243,20 @@ body.dark {
   background-color: #3d3d3d;
   transition: 0.3s;
 }
-body.dark #switchWrapper #switch {
+body.dark .header {
   background-color: #4b4b4b;
-  border: 1px solid #020202;
 }
-body.dark #switchWrapper #switch .flicker {
+body.dark .header .flex #switch {
+  background-color: #3d3d3d;
+}
+body.dark .header .flex #switch .flicker {
   transform: translateX(4rem);
+}
+body.dark .header .flex .home-btn {
+  background-color: #3d3d3d;
+}
+body.dark .header .flex .home-btn:hover a i {
+  color: #00E77F;
 }
 body.dark .form-container form {
   background-color: #4b4b4b;
@@ -237,8 +287,31 @@ body.dark .form-container form .social-countainer .social div:hover a i {
   color: #fff;
 }
 
-@media screen and (max-width: 462) {
-  form {
-    width: 100%;
+@media (max-width: 768px) {
+  .header .flex #menu-btn {
+    display: inline-block;
+  }
+  .header .flex #menu-btn.fa-times {
+    transform: rotate(180deg);
+  }
+  .header .flex .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    border-top: 0.1rem solid #aaa;
+    border-bottom: 0.1rem solid #aaa;
+    background-color: #7b2cbf;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .flex .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .flex .navbar a {
+    display: block;
+    text-align: center;
+    margin: 2rem;
   }
 }/*# sourceMappingURL=login-form.css.map */

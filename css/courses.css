@@ -6,6 +6,25 @@
   font-family: "sultan";
   src: url(../fonts/Sultan\ Adan\ 2Line\ .ttf) format("truetype");
 }
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+}
+
+body {
+  font-family: "amin";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s linear;
+  text-transform: capitalize;
+}
+
 body {
   direction: rtl;
 }
@@ -21,7 +40,6 @@ body section {
   left: 3%;
   z-index: 1000;
   font-size: 2.5rem;
-  box-shadow: 0px 0px 20px -6px #fff;
   width: 4rem;
   border-radius: 20%;
   background-color: #5a189a;
@@ -199,16 +217,16 @@ body.dark {
 body.dark .header {
   background-color: #4b4b4b;
 }
-body.dark .header .flex .home #switch {
+body.dark .header .flex #switch {
   background-color: #3d3d3d;
 }
-body.dark .header .flex .home #switch .flicker {
+body.dark .header .flex #switch .flicker {
   transform: translateX(4rem);
 }
-body.dark .header .flex .home .home-btn {
+body.dark .header .flex .home-btn {
   background-color: #3d3d3d;
 }
-body.dark .header .flex .home .home-btn:hover a i {
+body.dark .header .flex .home-btn:hover a i {
   color: #00E77F;
 }
 body.dark #main .course-wrapper .course {
@@ -226,4 +244,33 @@ body.dark .footer .share a {
 }
 body.dark .footer .share a:hover {
   background-color: #00E77F;
+}
+
+@media (max-width: 768px) {
+  .header .flex #menu-btn {
+    display: inline-block;
+  }
+  .header .flex #menu-btn.fa-times {
+    transform: rotate(180deg);
+  }
+  .header .flex .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    border-top: 0.1rem solid #aaa;
+    border-bottom: 0.1rem solid #aaa;
+    background-color: #7b2cbf;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .flex .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .flex .navbar a {
+    display: block;
+    text-align: center;
+    margin: 2rem;
+  }
 }/*# sourceMappingURL=courses.css.map */

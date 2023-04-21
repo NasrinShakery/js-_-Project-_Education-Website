@@ -87,3 +87,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // fetch("../json/x.json").then  (res => res.json())
   // .then(res=> loadData(res))
 });
+
+
+
+let menuBtn = $.getElementById("menu-btn");
+let navbar = $.querySelector(".header .flex .navbar");
+menuBtn.onclick = () => {
+  menuBtn.classList.toggle("fa-times");
+  navbar.classList.toggle("active");
+};

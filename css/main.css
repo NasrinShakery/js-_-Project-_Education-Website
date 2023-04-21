@@ -6,6 +6,25 @@
   font-family: "sultan";
   src: url(../fonts/Sultan\ Adan\ 2Line\ .ttf) format("truetype");
 }
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+}
+
+body {
+  font-family: "amin";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s linear;
+  text-transform: capitalize;
+}
+
 body {
   direction: rtl;
 }

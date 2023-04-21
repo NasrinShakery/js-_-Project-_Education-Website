@@ -1,192 +1,219 @@
 @import "main.scss";
 
-html{
-    font-size: 62.5%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    scroll-padding-top: 8rem;
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
 }
 
-body{
-    font-family: 'amin';
-    margin: 0; padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    transition: 0.2s linear;
-    text-transform: capitalize;
+body {
+  font-family: "amin";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s linear;
+  text-transform: capitalize;
 }
 
 // -------------Header------------------
-.header{
-    background-color: $violet3;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    .flex{
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .navbar{
-            a{
-                text-decoration: none;
-                margin-left: 2rem;
-                color: $light-white;
-                font-size: 2rem;
-                &:hover{
-                    color: $green;
-                }
-            }
+.header {
+  background-color: $violet3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  .flex {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .navbar {
+      a {
+        text-decoration: none;
+        margin-left: 2rem;
+        color: $light-white;
+        font-size: 2rem;
+        &:hover {
+          color: $green;
         }
-        #menu-btn{
-            cursor: pointer;
-            color: $white;
-            font-size: 2.5rem;
-            display: none;
-        }
-        .home{
-            display: flex;
-            .home-btn{
-                position: relative;
-                font-size: 1.7rem;
-                margin: 0 1.5rem;
-            }
-            @include switchMood ();
-        }
+      }
     }
+    #menu-btn {
+      cursor: pointer;
+      color: $white;
+      font-size: 2.5rem;
+      display: none;
+    }
+    .home {
+      display: flex;
+      .home-btn {
+        position: relative;
+        font-size: 1.7rem;
+        margin: 0 1.5rem;
+      }
+      @include switchMood();
+    }
+  }
 }
 //----------------Lessons---------------------
-#main{
-    margin-top: 8rem;
-    // align-items: center;
-    h1{
-        text-align: center;
-        color: $green;
-        font-size: 3rem;
-    }
-    .course-wrapper{
-        // background-color: yellow;
-        display: grid;
-        grid-template-columns:repeat(3, 1fr);
-        gap: 10rem;
-        .course{
-            grid-column: span 1;
-            background-color: $violet-bg;
-            width: 100%;
-            border-radius: 2rem;
-            #imgBox{
-                img{
-                    display: block;
-                    margin: 0 auto;
-                    width: 90%;
-                }
-            }
-            .course-title{
-                text-align: center;
-                font-size: 2rem;
-                margin: 0;
-
-                a{
-                    color: $white;
-                    text-decoration: none;
-                    &:hover{
-                        color: $green;
-                    }
-                }
-            }
-            p{
-                text-align: center;
-                padding: 1rem;
-            }
-
+#main {
+  margin-top: 8rem;
+  // align-items: center;
+  h1 {
+    text-align: center;
+    color: $green;
+    font-size: 3rem;
+  }
+  .course-wrapper {
+    // background-color: yellow;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10rem;
+    .course {
+      grid-column: span 1;
+      background-color: $violet-bg;
+      width: 100%;
+      border-radius: 2rem;
+      #imgBox {
+        img {
+          display: block;
+          margin: 0 auto;
+          width: 90%;
         }
-    
+      }
+      .course-title {
+        text-align: center;
+        font-size: 2rem;
+        margin: 0;
+
+        a {
+          color: $white;
+          text-decoration: none;
+          &:hover {
+            color: $green;
+          }
+        }
+      }
+      p {
+        text-align: center;
+        padding: 1rem;
+      }
     }
+  }
 }
 
 //------ Footer ---------
-.footer{
-    background-color: $violet2;
-    text-align: center;
-    .share{
-        a{
-            margin: 0 0.3rem;
-            height: 4.5rem;
-            width: 4.5rem;
-            line-height: 4.5rem;
-            border-radius: 50%;
-            font-size: 2rem;
-            color: $white;
-            background-color: $violet-bg;
-            text-align: center;
-            &:hover{
-                background-color: $green;
-            }
-        }
+.footer {
+  background-color: $violet2;
+  text-align: center;
+  .share {
+    a {
+      margin: 0 0.3rem;
+      height: 4.5rem;
+      width: 4.5rem;
+      line-height: 4.5rem;
+      border-radius: 50%;
+      font-size: 2rem;
+      color: $white;
+      background-color: $violet-bg;
+      text-align: center;
+      &:hover {
+        background-color: $green;
+      }
     }
-    .credit{
-        /* text-align: center; */
-        margin-top: 2.5rem;
-        padding: 1.5rem;
-        border-top: 0.1rem solid $light-white;
-        font-size: 2rem;
-        color: $light-white;
-        span{
-            color: $green;
-        }
+  }
+  .credit {
+    /* text-align: center; */
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    border-top: 0.1rem solid $light-white;
+    font-size: 2rem;
+    color: $light-white;
+    span {
+      color: $green;
     }
+  }
 }
 //---------------------
 
-
 //-----------------Dark Mood--------------------
-body.dark{
-    background-color: $black;
-    transition: .3s;
-    .header{
+body.dark {
+  background-color: $black;
+  transition: 0.3s;
+  .header {
+    background-color: $light-bg;
+    .flex {
+      #switch {
+        background-color: $black;
+        .flicker {
+          transform: translateX(4rem);
+        }
+      }
+      .home-btn {
+        background-color: $black;
+        &:hover a i {
+          color: $green;
+        }
+      }
+    }
+  }
+  #main {
+    .course-wrapper {
+      .course {
         background-color: $light-bg;
-        .flex{
-            .home{
-                #switch{
-                    background-color: $black;
-                    .flicker {
-                        transform: translateX(4rem);
-                    }
-                }
-                .home-btn{
-                    background-color: $black;
-                    &:hover a i{
-                        color: $green;
-                    }
-                }
-            }
-            
+        border: $border;
+        p {
+          color: $light-white;
         }
+      }
     }
-    #main{
-        .course-wrapper{
-            .course{
-                background-color: $light-bg;
-                border: $border;
-                p{
-                    color: $light-white;
-                }
-            }
+  }
+  .footer {
+    background-color: $light-bg;
+    .share {
+      a {
+        background-color: $black;
+        &:hover {
+          background-color: $green;
         }
+      }
     }
-    .footer{
-        background-color: $light-bg;
-        .share{
-            a{
-                background-color: $black;
-                &:hover{
-                    background-color: $green;
-                }
-            }
+  }
+}
+
+//------------- media querry ------
+@media (max-width: 768px) {
+  .header {
+    .flex {
+      #menu-btn {
+        display: inline-block;
+        &.fa-times {
+          transform: rotate(180deg);
         }
+      }
+      .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        border-top: 0.1rem solid $light-white;
+        border-bottom: 0.1rem solid $light-white;
+        background-color: $violet3;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        &.active {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+        a {
+          display: block;
+          text-align: center;
+          margin: 2rem;
+        }
+      }
     }
+  }
 }
