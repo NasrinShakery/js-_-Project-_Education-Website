@@ -23,7 +23,6 @@ body section {
   z-index: 1000;
   font-size: 2.5rem;
   box-shadow: 0px 0px 20px -6px #fff;
-  height: 4rem;
   width: 4rem;
   border-radius: 20%;
   background-color: #5a189a;
@@ -34,10 +33,9 @@ body section {
 .home-btn:hover {
   background-color: #00E77F;
 }
-.home-btn i {
+.home-btn a i {
   color: #fff;
   padding: 1rem;
-  text-align: center;
 }
 
 /* @font-face {
@@ -317,6 +315,9 @@ body.dark .footer .share a:hover {
   font-size: 2rem;
   color: #fff;
 }
+.courses .course-slider .swiper-wrapper .course-slide h3 a:hover {
+  color: #00E77F;
+}
 .courses .course-slider .swiper-wrapper .course-slide p {
   line-height: 2;
   font-size: 1.6rem;
@@ -378,6 +379,10 @@ body.dark .footer .share a:hover {
   font-size: 2rem;
   color: #fff;
   text-align: center;
+  cursor: pointer;
+}
+.teachers .teachers-slider .swiper-wrapper .slide h3:hover {
+  color: #00E77F;
 }
 
 .reviwes .reviews-slider #students-wrapper .slide {

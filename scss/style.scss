@@ -340,6 +340,9 @@ body.dark{
                         margin: 1.5rem;
                         font-size: 2rem;
                         color: $white;
+                        &:hover{
+                            color: $green;
+                        }
                     }
                 }
                 p{
@@ -395,7 +398,6 @@ body.dark{
                         color: $black;
                         text-align: center;
                         &:hover{
-                            
                             background-color: $green;
                             color: $white;
                         }
@@ -411,6 +413,10 @@ body.dark{
                     font-size: 2rem;
                     color: $white;
                     text-align: center;
+                    cursor: pointer;
+                    &:hover{
+                        color: $green;
+                    }
                 }
             }
         }

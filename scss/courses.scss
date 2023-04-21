@@ -48,9 +48,18 @@ body{
             font-size: 2.5rem;
             display: none;
         }
-        @include switchMood ();
+        .home{
+            display: flex;
+            .home-btn{
+                position: relative;
+                font-size: 1.7rem;
+                margin: 0 1.5rem;
+            }
+            @include switchMood ();
+        }
     }
 }
+//----------------Lessons---------------------
 #main{
     margin-top: 8rem;
     // align-items: center;
@@ -84,6 +93,9 @@ body{
                 a{
                     color: $white;
                     text-decoration: none;
+                    &:hover{
+                        color: $green;
+                    }
                 }
             }
             p{
@@ -131,17 +143,37 @@ body{
 //---------------------
 
 
-
+//-----------------Dark Mood--------------------
 body.dark{
     background-color: $black;
     transition: .3s;
     .header{
         background-color: $light-bg;
         .flex{
-            #switch{
-                background-color: $black;
-                .flicker {
-                    transform: translateX(4rem);
+            .home{
+                #switch{
+                    background-color: $black;
+                    .flicker {
+                        transform: translateX(4rem);
+                    }
+                }
+                .home-btn{
+                    background-color: $black;
+                    &:hover a i{
+                        color: $green;
+                    }
+                }
+            }
+            
+        }
+    }
+    #main{
+        .course-wrapper{
+            .course{
+                background-color: $light-bg;
+                border: $border;
+                p{
+                    color: $light-white;
                 }
             }
         }

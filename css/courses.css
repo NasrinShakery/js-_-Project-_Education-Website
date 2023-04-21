@@ -22,7 +22,6 @@ body section {
   z-index: 1000;
   font-size: 2.5rem;
   box-shadow: 0px 0px 20px -6px #fff;
-  height: 4rem;
   width: 4rem;
   border-radius: 20%;
   background-color: #5a189a;
@@ -33,10 +32,9 @@ body section {
 .home-btn:hover {
   background-color: #00E77F;
 }
-.home-btn i {
+.home-btn a i {
   color: #fff;
   padding: 1rem;
-  text-align: center;
 }
 
 html {
@@ -87,14 +85,22 @@ body {
   font-size: 2.5rem;
   display: none;
 }
-.header .flex #switch {
+.header .flex .home {
+  display: flex;
+}
+.header .flex .home .home-btn {
+  position: relative;
+  font-size: 1.7rem;
+  margin: 0 1.5rem;
+}
+.header .flex .home #switch {
   width: 8rem;
   height: 4rem;
   background-color: #5a189a;
   border-radius: 2rem;
   position: relative;
 }
-.header .flex #switch .flicker {
+.header .flex .home #switch .flicker {
   background-color: #fff;
   width: 3rem;
   height: 3rem;
@@ -105,7 +111,7 @@ body {
   transition: 0.3s;
   box-shadow: inset 4px 4px 4px rgb(255, 255, 255), inset -4px -4px 4px rgba(195, 193, 198, 0.9);
 }
-.header .flex #switch .moon {
+.header .flex .home #switch .moon {
   width: 2rem;
   height: 2rem;
   border-radius: 1rem;
@@ -147,6 +153,9 @@ body {
 #main .course-wrapper .course .course-title a {
   color: #fff;
   text-decoration: none;
+}
+#main .course-wrapper .course .course-title a:hover {
+  color: #00E77F;
 }
 #main .course-wrapper .course p {
   text-align: center;
@@ -190,11 +199,24 @@ body.dark {
 body.dark .header {
   background-color: #4b4b4b;
 }
-body.dark .header .flex #switch {
+body.dark .header .flex .home #switch {
   background-color: #3d3d3d;
 }
-body.dark .header .flex #switch .flicker {
+body.dark .header .flex .home #switch .flicker {
   transform: translateX(4rem);
+}
+body.dark .header .flex .home .home-btn {
+  background-color: #3d3d3d;
+}
+body.dark .header .flex .home .home-btn:hover a i {
+  color: #00E77F;
+}
+body.dark #main .course-wrapper .course {
+  background-color: #4b4b4b;
+  border: 1px solid #020202;
+}
+body.dark #main .course-wrapper .course p {
+  color: #aaa;
 }
 body.dark .footer {
   background-color: #4b4b4b;
