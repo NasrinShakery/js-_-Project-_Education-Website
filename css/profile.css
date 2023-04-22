@@ -6,6 +6,25 @@
   font-family: "sultan";
   src: url(../fonts/Sultan\ Adan\ 2Line\ .ttf) format("truetype");
 }
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+}
+
+body {
+  font-family: "amin";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s linear;
+  text-transform: capitalize;
+}
+
 body {
   direction: rtl;
 }
@@ -21,8 +40,6 @@ body section {
   left: 3%;
   z-index: 1000;
   font-size: 2.5rem;
-  box-shadow: 0px 0px 20px -6px #fff;
-  height: 4rem;
   width: 4rem;
   border-radius: 20%;
   background-color: #5a189a;
@@ -33,10 +50,9 @@ body section {
 .home-btn:hover {
   background-color: #00E77F;
 }
-.home-btn i {
+.home-btn a i {
   color: #fff;
   padding: 1rem;
-  text-align: center;
 }
 
 * {

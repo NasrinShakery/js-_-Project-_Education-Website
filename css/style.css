@@ -7,6 +7,25 @@
   font-family: "sultan";
   src: url(../fonts/Sultan\ Adan\ 2Line\ .ttf) format("truetype");
 }
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+}
+
+body {
+  font-family: "amin";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s linear;
+  text-transform: capitalize;
+}
+
 body {
   direction: rtl;
 }
@@ -22,7 +41,6 @@ body section {
   left: 3%;
   z-index: 1000;
   font-size: 2.5rem;
-  box-shadow: 0px 0px 20px -6px #fff;
   width: 4rem;
   border-radius: 20%;
   background-color: #5a189a;
@@ -98,6 +116,11 @@ body.dark {
 body.dark .header {
   background-color: #4b4b4b;
 }
+body.dark .header .flex .clock {
+  background-color: #3d3d3d;
+  box-shadow: 4px 4px 20px rgba(122, 122, 122, 0.3);
+  color: #e0aaff;
+}
 body.dark .header .flex #switch {
   background-color: #3d3d3d;
 }
@@ -172,6 +195,18 @@ body.dark .footer .share a:hover {
   color: #fff;
   font-size: 2.5rem;
   display: none;
+}
+.header .flex .clock {
+  background-color: #9d4edd;
+  font-family: "Courier New", Courier, monospace;
+  color: #fff;
+  font-weight: 900;
+  font-style: italic;
+  padding: 0.5rem;
+  border-radius: 15rem;
+  text-transform: lowercase;
+  font-size: 2rem;
+  letter-spacing: 7px;
 }
 .header .flex #switch {
   width: 8rem;

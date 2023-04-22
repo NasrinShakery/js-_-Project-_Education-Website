@@ -75,6 +75,11 @@ body.dark{
     .header{
         background-color: $light-bg;
         .flex{
+            .clock{
+                background-color: $black;
+                box-shadow: $box-shadow-white;
+                color: $violet0;
+            }
             #switch{
                 background-color: $black;
                 .flicker {
@@ -214,6 +219,21 @@ body.dark{
         //         left: 4.5rem;
         //     }
         // }
+        .clock{
+            background-color: $violet2;
+            font-family: 'Courier New', Courier, monospace;
+            // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            // font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: $white;
+            font-weight: 900;
+            font-style: italic;
+            padding: .5rem;
+            border-radius: 15rem;
+            text-transform: lowercase;
+            font-size: 2rem;
+            // font-family: ;
+            letter-spacing: 7px;
+        }
         @include switchMood ();
     }
 }
