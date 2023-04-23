@@ -111,12 +111,38 @@
             </div>
 
             <div class="content">
-                <h3>چرا ما را انتخاب کنید؟</h3>
+                <!-- <h3>چرا ما را انتخاب کنید؟</h3>
                 <p>
                     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، 
                     و با استفاده از طراحان گرافیک است، چاپگرها و 
                 </p>
-                <a href="contact" class="btn">ارتباط با ما</a>
+                <a href="contact" class="btn">ارتباط با ما</a> -->
+                
+                <div class="dictionary">
+                    <h2 id="dic-title">Dictionary</h2>
+       
+                    <div class="input-wrapper">
+                        <input type="text" class="txtBox" placeholder="لغت مورد نظرت رو وارد کن">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="search-result">
+                    
+                        <p class="description"></p>
+
+                        <div class="volume-box">
+                            <i id="volume" class="fas fa-volume-up"></i>
+                    
+                            <span id="phonetic"></span>
+                        </div>
+                    
+                    
+                        <p id="meaning"></p>
+
+                    </div>
+                </div>
+                
+
             </div>
         </div>
     </section>
@@ -276,6 +302,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- custom js file link -->
     <script src="js/app.js"></script>
+    <script src="js/dic-app.js"></script>
     <!-- <script src="js/test.js"></script> -->
     
 </body>

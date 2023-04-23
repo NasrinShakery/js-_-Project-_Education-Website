@@ -303,30 +303,88 @@ body.dark .footer .share a:hover {
 }
 
 .about .row {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 1rem;
 }
 .about .row .image {
-  flex: 1 1 40rem;
+  width: 100%;
 }
 .about .row .image img {
   width: 100%;
 }
 .about .row .content {
+  display: flex;
   text-align: center;
-  flex: 1 1 40rem;
+  justify-content: center;
 }
-.about .row .content h3 {
-  font-size: 3rem;
+.about .row .content .dictionary {
+  background: #c4aaff;
+  border-radius: 1.5rem;
   color: #fff;
+  width: 100%;
+  direction: ltr;
+  margin: 0 auto;
 }
-.about .row .content p {
-  padding: 1rem 0;
-  line-height: 2;
-  font-size: 1.6rem;
-  color: #aaa;
+.about .row .content .dictionary #dic-title {
+  padding: 2rem;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Times New Roman", Times, serif;
+  text-shadow: -5px -3px 2px #7b2cbf;
+}
+.about .row .content .dictionary .input-wrapper {
+  position: relative;
+}
+.about .row .content .dictionary .input-wrapper .txtBox {
+  border: 1px solid #999;
+  border-radius: 11px;
+  font-size: 16px;
+  padding: 15px;
+  width: 90%;
+}
+.about .row .content .dictionary .input-wrapper .txtBox:focus {
+  border: 2px solid #9019e6;
+}
+.about .row .content .dictionary .input-wrapper .txtBox::-moz-placeholder {
+  color: #B8B8B8;
+}
+.about .row .content .dictionary .input-wrapper .txtBox::placeholder {
+  color: #B8B8B8;
+}
+.about .row .content .dictionary .input-wrapper .fa-times {
+  font-size: 2rem;
+  color: #c4aaff;
+  position: absolute;
+  top: 30%;
+  left: 85%;
+}
+.about .row .content .dictionary .search-result {
+  padding: 20px;
+}
+.about .row .content .dictionary .search-result .description {
+  font-size: 2rem;
+}
+.about .row .content .dictionary .search-result .volume-box {
+  display: grid;
+  grid-template-columns: 10% 10%;
+}
+.about .row .content .dictionary .search-result .volume-box #volume {
+  font-size: 2.5rem;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 3rem;
+  cursor: pointer;
+  display: none;
+}
+.about .row .content .dictionary .search-result .volume-box #phonetic {
+  margin-left: 2rem;
+  font-size: 2rem;
+}
+.about .row .content .dictionary .search-result #meaning {
+  padding: 1.5rem;
+  font-size: 2rem;
 }
 
 .courses .course-slider .swiper-wrapper .course-slide {

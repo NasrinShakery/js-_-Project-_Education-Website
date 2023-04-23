@@ -312,29 +312,93 @@ body.dark{
 // ----------------About------------------
 .about{
     .row{
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        // align-items: center;
+        gap: 1rem;
+        // flex-wrap: wrap;
         .image{
-            flex: 1 1 40rem;
+            width: 100%;
             img{
                 width: 100%;
             }
         }
         .content{
+            display: flex;
             text-align: center;
-            flex: 1 1 40rem;
-            h3{
-                font-size: 3rem;
-                color: $white;
+            justify-content: center;
+            .dictionary{
+                background: $violet-bg;
+                border-radius: 1.5rem;
+                color: #fff;
+                width: 100%;
+                direction: ltr;
+                // height: 80%;
+                margin: 0 auto;
+                #dic-title{
+                    padding: 2rem;
+                    text-align: center;
+                    font-size: 3rem;
+                    // font-family: 'Times New Roman', Times, serif;
+                    font-family: 'Times New Roman', Times, serif;
+                    // text-shadow: 0px 0px 2px $violet4;
+                    text-shadow: -5px -3px 2px $violet3;
+                }
+                .input-wrapper{
+                    position: relative;
+                    .txtBox {
+                        border: 1px solid #999;
+                        border-radius: 11px;
+                        font-size:16px;
+                        padding: 15px;
+                        width:90%;
+                        &:focus{
+                            border: 2px solid #9019e6;
+                        }
+                        &::placeholder{
+                            color: #B8B8B8;
+                        }
+                      }
+                    .fa-times{
+                        font-size: 2rem;
+                        color: $violet-bg;
+                        position: absolute;
+                        top:30%;
+                        left: 85%;
+                    }
+                }
+                .search-result{
+                    padding:20px;
+                    .description{
+                        font-size: 2rem;
+                    }
+                    .volume-box{
+                        display: grid;
+                        grid-template-columns: 10% 10%;
+                        #volume{
+                            font-size: 2.5rem;
+                            border-radius: 50%;
+                            // padding: 2rem;
+                            width: 2rem;
+                            height: 2rem;
+                            margin-left: 3rem;
+                            // color: $violet1;
+                            cursor: pointer;
+                            display: none;
+                        }
+                        #phonetic{
+                            margin-left: 2rem;
+                            font-size: 2rem;
+                        }
+                    }
+                    #meaning{
+                        padding: 1.5rem;
+                        font-size: 2rem;
+                    }
+                }
             }
-            p{
-                padding: 1rem 0;
-                line-height: 2;
-                font-size: 1.6rem;
-                color: $light-white;
-            }
+            
+            
         }
     }
 }
