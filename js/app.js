@@ -1,5 +1,17 @@
 const $ = document;
 
+const loaderElement = $.querySelector("#loader");
+const loaderWrapperElement = $.querySelector("#loader-wrapper")
+window.addEventListener("load",function(){
+ 
+  loaderElement.classList += " hidden";
+  
+  if(loaderElement.classList === " hidden"){
+  }
+  loaderWrapperElement.style.display = 'none';
+});
+
+
 function showTime(){
   var date = new Date();
   var h = date.getHours(); // 0 - 23
@@ -21,22 +33,12 @@ function showTime(){
   s = (s < 10) ? "0" + s : s;
   
   var time =  h + ":" + m + ":" + s +  session;
-  document.getElementById("MyClockDisplay").innerText = time;
-  document.getElementById("MyClockDisplay").textContent = time;
+  $.getElementById("MyClockDisplay").innerText = time;
+  $.getElementById("MyClockDisplay").textContent = time;
   
   setTimeout(showTime, 1000);
   
 }
-
-// showTime();
-
-// let online = $.querySelector('#online')
-// function darkLight(){
-//   let color = document.documentElement.style.getPropertyValue(`${$violet0}`)
-//   console.log('dark');
-//   console.log(color);
-// }
-// online.addEventListener('click', darkLight)
 
 // -------------- For Dark & Light Mood ----------
 const switchElem = $.querySelector("#switch");
@@ -49,7 +51,7 @@ switchElem.addEventListener("click", function () {
   }
 });
 //----------------------
-document.addEventListener("DOMContentLoaded", function () {
+$.addEventListener("DOMContentLoaded", function () {
   showTime();
 
   fetch("../json/x.json")
@@ -61,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let theme = localStorage.getItem("theme");
   if (theme === "dark") {
-    document.body.classList.add("dark");
+    $.body.classList.add("dark");
     console.log(theme);
   }
 });
@@ -72,9 +74,6 @@ let studentsWrapper = $.querySelector("#students-wrapper");
 
 let menuBtn = $.getElementById("menu-btn");
 let navbar = $.querySelector(".header .flex .navbar");
-
-// let sElem = getComputedStyle(menuBtn)
-//   console.log(sElem);
 
 menuBtn.onclick = () => {
   menuBtn.classList.toggle("fa-times");
