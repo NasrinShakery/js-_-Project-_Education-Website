@@ -130,6 +130,12 @@ body.dark .header .flex #switch {
 body.dark .header .flex #switch .flicker {
   transform: translateX(4rem);
 }
+body.dark #dic .row .dictionary {
+  background-color: #4b4b4b;
+}
+body.dark #dic .row .dictionary .search-result .fa-volume-up {
+  color: #c77dff;
+}
 body.dark .count .box-container .box {
   background-color: #4b4b4b;
 }
@@ -383,23 +389,24 @@ body.dark .footer .share a:hover {
   color: #5a189a;
 }
 
-.about .row {
+#dic .row {
   display: grid;
   grid-template-columns: 2fr 3fr;
   gap: 1rem;
 }
-.about .row .image {
+#dic .row .image {
   width: 100%;
 }
-.about .row .image img {
+#dic .row .image img {
   width: 100%;
 }
-.about .row .content {
+#dic .row .content {
   display: flex;
   text-align: center;
   justify-content: center;
 }
-.about .row .content .dictionary {
+#dic .row .content .dictionary {
+  border: 1px solid #020202;
   background: #c4aaff;
   border-radius: 1.5rem;
   color: #fff;
@@ -407,50 +414,50 @@ body.dark .footer .share a:hover {
   direction: ltr;
   margin: 0 auto;
 }
-.about .row .content .dictionary #dic-title {
+#dic .row .content .dictionary #dic-title {
   padding: 2rem;
   text-align: center;
   font-size: 3rem;
   font-family: "Times New Roman", Times, serif;
   text-shadow: -5px -3px 2px #7b2cbf;
 }
-.about .row .content .dictionary .input-wrapper {
+#dic .row .content .dictionary .input-wrapper {
   position: relative;
 }
-.about .row .content .dictionary .input-wrapper .txtBox {
+#dic .row .content .dictionary .input-wrapper .txtBox {
   border: 1px solid #999;
   border-radius: 11px;
   font-size: 16px;
   padding: 15px;
   width: 90%;
 }
-.about .row .content .dictionary .input-wrapper .txtBox:focus {
+#dic .row .content .dictionary .input-wrapper .txtBox:focus {
   border: 2px solid #9019e6;
 }
-.about .row .content .dictionary .input-wrapper .txtBox::-moz-placeholder {
+#dic .row .content .dictionary .input-wrapper .txtBox::-moz-placeholder {
   color: #B8B8B8;
 }
-.about .row .content .dictionary .input-wrapper .txtBox::placeholder {
+#dic .row .content .dictionary .input-wrapper .txtBox::placeholder {
   color: #B8B8B8;
 }
-.about .row .content .dictionary .input-wrapper .fa-times {
+#dic .row .content .dictionary .input-wrapper .fa-times {
   font-size: 2rem;
   color: #c4aaff;
   position: absolute;
   top: 30%;
   left: 85%;
 }
-.about .row .content .dictionary .search-result {
+#dic .row .content .dictionary .search-result {
   padding: 20px;
 }
-.about .row .content .dictionary .search-result .description {
+#dic .row .content .dictionary .search-result .description {
   font-size: 2rem;
 }
-.about .row .content .dictionary .search-result .volume-box {
+#dic .row .content .dictionary .search-result .volume-box {
   display: grid;
   grid-template-columns: 10% 10%;
 }
-.about .row .content .dictionary .search-result .volume-box #volume {
+#dic .row .content .dictionary .search-result .volume-box #volume {
   font-size: 2.5rem;
   border-radius: 50%;
   width: 2rem;
@@ -459,11 +466,11 @@ body.dark .footer .share a:hover {
   cursor: pointer;
   display: none;
 }
-.about .row .content .dictionary .search-result .volume-box #phonetic {
+#dic .row .content .dictionary .search-result .volume-box #phonetic {
   margin-left: 2rem;
   font-size: 2rem;
 }
-.about .row .content .dictionary .search-result #meaning {
+#dic .row .content .dictionary .search-result #meaning {
   padding: 1.5rem;
   font-size: 2rem;
 }
@@ -545,6 +552,15 @@ body.dark .footer .share a:hover {
   background-color: #00E77F;
   color: #fff;
 }
+.teachers .teachers-slider .swiper-wrapper .slide .share a.fa-instagram {
+  color: palevioletred;
+}
+.teachers .teachers-slider .swiper-wrapper .slide .share a.fa-telegram {
+  color: dodgerblue;
+}
+.teachers .teachers-slider .swiper-wrapper .slide .share a.fa-whatsapp {
+  color: lime;
+}
 .teachers .teachers-slider .swiper-wrapper .slide:hover .share {
   left: 3.5rem;
 }
@@ -595,7 +611,7 @@ body.dark .footer .share a:hover {
 }
 .reviwes .reviews-slider #students-wrapper .slide .user .user-info .stars i {
   font-size: 1.6rem;
-  color: #00E77F;
+  color: #ffff00;
 }
 
 .contact .row {

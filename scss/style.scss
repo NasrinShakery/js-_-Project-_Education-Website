@@ -91,6 +91,18 @@ body.dark{
             }
         }
     }
+    #dic{
+        .row{
+            .dictionary{
+                background-color: $light-bg;
+                .search-result{
+                    .fa-volume-up{
+                        color: $violet1;
+                    }
+                }
+            }
+        }
+    }
     .count{
         .box-container{
             .box{
@@ -396,8 +408,8 @@ body.dark{
         }
     }
 }
-// ----------------About------------------
-.about{
+// ----------------Dictionary------------------
+#dic{
     .row{
         display: grid;
         grid-template-columns: 2fr 3fr;
@@ -415,6 +427,7 @@ body.dark{
             text-align: center;
             justify-content: center;
             .dictionary{
+                border: $border;
                 background: $violet-bg;
                 border-radius: 1.5rem;
                 color: #fff;
@@ -573,7 +586,15 @@ body.dark{
                             color: $white;
                         }
                     }
-                    
+                    a.fa-instagram{
+                        color: palevioletred;
+                    }
+                    a.fa-telegram{
+                        color: dodgerblue;
+                    }
+                    a.fa-whatsapp{
+                        color: lime;
+                    }
                 }
                 &:hover .share{
                     left: 3.5rem;
@@ -631,7 +652,7 @@ body.dark{
                         .stars{
                             i{
                                 font-size: 1.6rem;
-                                color: $green;
+                                color: $starYellow;
                             }
                         }
                     }
