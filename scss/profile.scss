@@ -133,20 +133,7 @@ body{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
-                .status{
-                    // input{
-                    //     background: linear-gradient(
-                    //         to right bottom,
-                    //         rgba(255,255,255,0.7),
-                    //         rgba(255,255,255,0.3)
-                    //     );
-                    //     border: none;
-                    //     border-radius: 2rem;
-                    //     outline: none;
-                    //     width:50%;
-                    //     padding: 0.4rem;
-                    // }
-                }
+                
                 //-----cards
                 .cards{
                     .card{
@@ -186,10 +173,7 @@ body{
                         }
                         .percentage{
                             font-weight: bold;
-                            // background: linear-gradient(to right top,#65dfc9, #6cdbeb);
                             color: $violet2;
-                            // background-clip: text;
-                            // -webkit-text-fill-color: transparent;
                         }
                     }
                 }

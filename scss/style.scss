@@ -1,23 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 @import "main.scss";
 
-/* @font-face {
-    font-family: 'Rubik';
-    src: url(../fonts/Rubik-VariableFont_wght.ttf) format('truetype'),
-         url(../fonts/Rubik-Italic-VariableFont_wght.ttf);
-} */
-
-//------------------------------------------------
-// $green:#00E77F;
-// $white: #fff;
-// $light-white:#aaa;
-// $black:#3d3d3d;
-// $light-bg:#4b4b4b;
-// $borderBlack:#020202;
-
 //------------------------------------------------
 *{
-    // font-family: 'Rubik', sans-serif;
     font-family: 'amin';
     margin: 0; padding: 0;
     box-sizing: border-box;
@@ -27,10 +12,6 @@
     transition: 0.2s linear;
     text-transform: capitalize;
 }
-// *::selection{
-//     background-color: $white;
-//     color: $black;
-// }
 html{
     font-size: 62.5%;
     overflow-x: hidden;
@@ -289,35 +270,6 @@ body.dark{
             font-size: 2.5rem;
             display: none;
         }
-        //-----For Dark & Light Mood ----
-        // #switch{
-        //     width: 8rem;
-        //     height: 4rem;
-        //     background-color: $violet4;
-        //     border-radius: 2rem;
-        //     position: relative;
-        //     .flicker{
-        //         background-color: $white;
-        //         width: 3rem;
-        //         height: 3rem;
-        //         border-radius: 1.5rem;
-        //         position: absolute;
-        //         top: .5rem;
-        //         left: .5rem;
-        //         transition: .3s;
-        //         box-shadow: inset 4px 4px 4px rgb(255, 255, 255),
-        //                     inset -4px -4px 4px rgb(195 193 198 / 90%);
-        //     }
-        //     .moon{
-        //         width: 2rem;
-        //         height: 2rem;
-        //         border-radius: 1rem;
-        //         box-shadow: 4px 4px 0 0 $white;
-        //         position: absolute;
-        //         top: .5rem;
-        //         left: 4.5rem;
-        //     }
-        // }
         .clock{
             background-color: $violet2;
             font-family: 'Courier New', Courier, monospace;
@@ -415,7 +367,6 @@ body.dark{
         grid-template-columns: 2fr 3fr;
         // align-items: center;
         gap: 1rem;
-        // flex-wrap: wrap;
         .image{
             width: 100%;
             img{
@@ -439,9 +390,7 @@ body.dark{
                     padding: 2rem;
                     text-align: center;
                     font-size: 3rem;
-                    // font-family: 'Times New Roman', Times, serif;
                     font-family: 'Times New Roman', Times, serif;
-                    // text-shadow: 0px 0px 2px $violet4;
                     text-shadow: -5px -3px 2px $violet3;
                 }
                 .input-wrapper{

@@ -89,99 +89,12 @@ body{
 }
 //---------------------------------------
 
-// body.dark{
-//     background-color: $black;
-//     transition: .3s;
-//     .header{
-//         background-color: $light-bg;
-//         .flex{
-//             #switch{
-//                 background-color: $black;
-//                 .flicker {
-//                     transform: translateX(4rem);
-//                   }
-//             }
-//         }
-//     }
-//     .count{
-//         .box-container{
-//             .box{
-//                 background-color: $light-bg;
-//                 .content{
-//                     p{
-//                         color: $light-white;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-//     .courses{
-//         .course-slider{
-//             .course-slide{
-//                 background-color: $light-bg;
-//                 p{
-//                     color: $light-white;
-//                 }
-//             }
-//         } 
-//     }
-//     .teachers{
-//         .teachers-slider{
-//             .slide{
-//                 background-color: transparent;
-//                 border: none;
-//             }
-//         }
-//     }
-//     .reviwes{
-//         .reviews-slider{
-//             #students-wrapper{
-//                 .slide{
-//                     background-color: $light-bg;
-//                     p{
-//                         color: $light-white;
-//                     }
-//                 }
-//             }
-            
-//         }
-//     }
-//     .contact{
-//         form{
-//             .box{
-//                 background-color: $light-bg;
-//             }
-//             .radio{
-//                 label{
-//                     color: $light-white;
-//                 }
-//                 input{
-//                     background-color: $light-white;
-//                 }
-//             }
-//         }
-//     }
-//     .footer{
-//         background-color: $light-bg;
-//         .share{
-//             a{
-//                 background-color: $black;
-//                 &:hover{
-//                     background-color: $green;
-//                 }
-//             }
-//         }
-//     }
-// }
-
 .home-btn{
     position: fixed;
     top: 5%;
     left: 3%;
     z-index: 1000;
     font-size: 2.5rem;
-    // box-shadow:0px 0px 20px -6px $white;
-    // height: 4rem;
     width: 4rem;
     border-radius: 20%;
     background-color: $violet4;
