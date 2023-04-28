@@ -239,6 +239,36 @@ body .form-container form .social-countainer .social div a i {
   margin-right: 4px;
 }
 
+.footer {
+  background-color: #9d4edd;
+  text-align: center;
+}
+.footer .share a {
+  margin: 0 0.3rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #c4aaff;
+  text-align: center;
+}
+.footer .share a:hover {
+  background-color: #00E77F;
+}
+.footer .credit {
+  /* text-align: center; */
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  border-top: 0.1rem solid #aaa;
+  font-size: 2rem;
+  color: #aaa;
+}
+.footer .credit span {
+  color: #00E77F;
+}
+
 body.dark {
   background-color: #3d3d3d;
   transition: 0.3s;
@@ -285,6 +315,15 @@ body.dark .form-container form .social-countainer .social div:hover {
 }
 body.dark .form-container form .social-countainer .social div:hover a i {
   color: #fff;
+}
+body.dark .footer {
+  background-color: #4b4b4b;
+}
+body.dark .footer .share a {
+  background-color: #3d3d3d;
+}
+body.dark .footer .share a:hover {
+  background-color: #00E77F;
 }
 
 @media (max-width: 768px) {
