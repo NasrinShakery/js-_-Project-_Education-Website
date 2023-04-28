@@ -56,11 +56,6 @@ body section {
   padding: 1rem;
 }
 
-/* @font-face {
-    font-family: 'Rubik';
-    src: url(../fonts/Rubik-VariableFont_wght.ttf) format('truetype'),
-         url(../fonts/Rubik-Italic-VariableFont_wght.ttf);
-} */
 * {
   font-family: "amin";
   margin: 0;
