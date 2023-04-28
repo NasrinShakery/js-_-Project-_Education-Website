@@ -45,27 +45,51 @@
       <!-- header End -->
 
     <div class="form-container">
-        <form action="">
-            <h3>ورود</h3>
-            <label for="username">نام کاربری</label>
-            <input type="text" name="username" id="username" placeholder="شماره موبایل خود را وارد کنید">
-
+        
+        <div class="title">
+            <h3 id="title-sign-in">ورود</h3>
+            <h3 id="title-sign-up">ثبت نام</h3>
+        </div>
+        
+        <div id="login">
+            <form action="">
+                <label for="username">نام کاربری</label>
+            <input type="text" name="phoneNumber" id="phoneNumber" placeholder="شماره موبایل خود را وارد کنید">
             <label for="password">رمز عبور</label>
             <div class="pass">
                 <input type="password" class="pass" name="password" id="password" placeholder="رمز عبور خور را وارد کنید">
                 <i id="show-hide" class="fa fa-eye-slash"></i>
             </div>
             <button type="submit">ورود</button>
-            
+        
             <hr>
             <div class="social-countainer">
                 <h3>ورود با اکانت</h3>
                 <div class="social">
-                    <div><a class="go" href="#"><i class="fa fa-google"></i></a></div>
+                    <div><a class="go" href="../pages/profile.html"><i class="fa fa-google"></i></a></div>
                     <div><a class="fb" href="#"><i class="fa fa-facebook"></i></a></div>
                 </div>
             </div>
-        </form>
+            </form>
+        </div>
+    
+        <div id="sign-up">
+            <form action="">
+                <input type="text" name="username" id="username" placeholder=" نام و نام خانوادگی خود را وارد کنید">
+                <input type="text" name="phoneNumber" id="phoneNumber" placeholder="شماره موبایل خود را وارد کنید">
+                <br><br>
+                <div class="pass">
+                    <input type="password" class="pass" name="password" id="password" placeholder="رمز عبور خور را وارد کنید">
+                </div>
+                <div class="pass">
+                    <input type="password" class="pass" name="confirmPassword" id="confirmPassword" placeholder="تکرار رمز عبور ">
+                </div>
+                <br><br><br>
+                <button type="submit">ثبت نام</button>
+        
+            </form>
+        </div>
+        
     </div>
 
 

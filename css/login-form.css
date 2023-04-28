@@ -133,10 +133,33 @@ body .form-container {
   margin-top: 8rem;
   width: 100%;
   padding: 50px 20px;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
-body .form-container form {
+body .form-container .title {
+  grid-column: 3/4;
+  height: 50px;
+  background-color: #9d4edd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+body .form-container .title h3 {
+  margin: 1rem;
+  padding: 4rem;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+body .form-container .title h3.hide {
+  display: none;
+}
+body .form-container #login {
+  grid-column: 3/4;
+  grid-row: 2/3;
   display: block;
   margin: auto;
   width: 400px;
@@ -146,17 +169,12 @@ body .form-container form {
   box-shadow: 4px 4px 20px rgba(122, 122, 122, 0.3);
   padding: 50px 35px;
 }
-body .form-container form h3 {
-  font-size: 1.5rem;
-  text-align: center;
-  color: #fff;
-}
-body .form-container form label {
+body .form-container #login form label {
   display: block;
   margin-top: 2rem;
   font-size: 1rem;
 }
-body .form-container form input {
+body .form-container #login form input {
   outline: none;
   border: none;
   width: 100%;
@@ -167,20 +185,20 @@ body .form-container form input {
   margin-top: 8px;
   font-weight: 100;
 }
-body .form-container form .pass {
+body .form-container #login form .pass {
   position: relative;
 }
-body .form-container form .pass i {
+body .form-container #login form .pass i {
   position: absolute;
   top: 50%;
   left: 20px;
   transform: translateY(-50%);
   cursor: pointer;
 }
-body .form-container form #show-hide {
+body .form-container #login form #show-hide {
   font-size: 1rem;
 }
-body .form-container form button {
+body .form-container #login form button {
   margin-top: 30px;
   width: 100%;
   background-color: #9d4edd;
@@ -191,31 +209,31 @@ body .form-container form button {
   border: 1px solid #020202;
   transition: all 0.1s;
 }
-body .form-container form button:hover {
+body .form-container #login form button:hover {
   background-color: #00E77F;
   color: #fff;
 }
-body .form-container form hr {
+body .form-container #login form hr {
   margin-top: 20px;
   height: 1px;
   background-color: #fff;
   border: none;
   outline: #00E77F;
 }
-body .form-container form .social-countainer {
+body .form-container #login form .social-countainer {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-body .form-container form .social-countainer h3 {
+body .form-container #login form .social-countainer h3 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-body .form-container form .social-countainer .social {
+body .form-container #login form .social-countainer .social {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-body .form-container form .social-countainer .social div {
+body .form-container #login form .social-countainer .social div {
   background-color: #c77dff;
   width: 150px;
   border: 1px solid #020202;
@@ -225,18 +243,72 @@ body .form-container form .social-countainer .social div {
   margin: 0 14px;
   cursor: pointer;
 }
-body .form-container form .social-countainer .social div:hover {
+body .form-container #login form .social-countainer .social div:hover {
   background-color: #00E77F;
 }
-body .form-container form .social-countainer .social div:hover a i {
+body .form-container #login form .social-countainer .social div:hover a i {
   color: #fff;
 }
-body .form-container form .social-countainer .social div a {
+body .form-container #login form .social-countainer .social div a {
   text-decoration: none;
   color: #5a189a;
 }
-body .form-container form .social-countainer .social div a i {
+body .form-container #login form .social-countainer .social div a i {
   margin-right: 4px;
+}
+body .form-container #login.hide {
+  display: none;
+}
+body .form-container #sign-up {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  display: block;
+  margin: auto;
+  width: 400px;
+  background-color: #c4aaff;
+  border: 1px solid #020202;
+  border-radius: 10px;
+  box-shadow: 4px 4px 20px rgba(122, 122, 122, 0.3);
+  padding: 50px 35px;
+}
+body .form-container #sign-up form input {
+  outline: none;
+  border: none;
+  width: 100%;
+  background-color: #e0aaff;
+  border: 1px solid #020202;
+  border-radius: 4px;
+  padding: 15px 10px;
+  margin-top: 8px;
+  font-weight: 100;
+}
+body .form-container #sign-up form .pass {
+  position: relative;
+}
+body .form-container #sign-up form .pass i {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+body .form-container #sign-up form button {
+  margin-top: 30px;
+  width: 100%;
+  background-color: #9d4edd;
+  padding: 15px 0;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #020202;
+  transition: all 0.1s;
+}
+body .form-container #sign-up form button:hover {
+  background-color: #00E77F;
+  color: #fff;
+}
+body .form-container #sign-up.hide {
+  display: none;
 }
 
 .footer {
@@ -288,33 +360,38 @@ body.dark .header .flex .home-btn {
 body.dark .header .flex .home-btn:hover a i {
   color: #00E77F;
 }
-body.dark .form-container form {
-  background-color: #4b4b4b;
+body.dark .form-container .title {
+  background-color: #5a189a;
 }
-body.dark .form-container form h3 {
-  color: #c4aaff;
-}
-body.dark .form-container form label {
-  color: #fff;
-}
-body.dark .form-container form input {
+body.dark .form-container #login {
   background-color: #aaa;
 }
-body.dark .form-container form button {
+body.dark .form-container #login label {
   color: #fff;
-  background-color: #e0aaff;
 }
-body.dark .form-container form button:hover {
+body.dark .form-container #login input {
+  background-color: #fff;
+}
+body.dark .form-container #login button {
+  color: #fff;
+}
+body.dark .form-container #login button:hover {
   background-color: #00E77F;
 }
-body.dark .form-container form .social-countainer .social div {
+body.dark .form-container #login .social-countainer .social div {
   background-color: #e0aaff;
 }
-body.dark .form-container form .social-countainer .social div:hover {
+body.dark .form-container #login .social-countainer .social div:hover {
   background-color: #00E77F;
 }
-body.dark .form-container form .social-countainer .social div:hover a i {
+body.dark .form-container #login .social-countainer .social div:hover a i {
   color: #fff;
+}
+body.dark .form-container #sign-up {
+  background-color: #aaa;
+}
+body.dark .form-container #sign-up input {
+  background-color: #fff;
 }
 body.dark .footer {
   background-color: #4b4b4b;

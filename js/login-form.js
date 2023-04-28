@@ -1,6 +1,25 @@
 // import {switchElem} from './app.js'
 
 const $ = document;
+// for register or login
+const logInTitleElem = $.querySelector('#title-sign-in');
+const signUpTitleElem = $.querySelector('#title-sign-up');
+const loginContainer = $.querySelector('#login');
+const signUpContainer = $.querySelector('#sign-up');
+
+logInTitleElem.addEventListener('click', ()=>{
+  signUpContainer.classList.add('hide');
+  loginContainer.classList.remove('hide');
+  logInTitleElem.style.color = 'violet';
+  signUpTitleElem.style.color = 'white';
+})
+signUpTitleElem.addEventListener('click', ()=>{
+  loginContainer.classList.add('hide');
+  signUpContainer.classList.remove('hide');
+  signUpTitleElem.style.color = 'violet';
+  logInTitleElem.style.color = 'white';
+
+})
 
 //----for  password  
 const showHide = $.getElementById("show-hide");

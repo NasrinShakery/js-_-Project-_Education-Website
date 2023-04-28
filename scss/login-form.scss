@@ -54,9 +54,33 @@ body {
     margin-top: 8rem;
     width: 100%;
     padding: 50px 20px;
-    display: flex;
-    justify-content: center;
-    form {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    // grid-template-rows: 1fr 4fr;
+    .title {
+      grid-column: 3/4;
+      height: 50px;
+      background-color: $violet2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
+      margin-bottom: 1rem;
+      h3 {
+        margin: 1rem;
+        padding: 4rem;
+        font-size: 2.5rem;
+        text-align: center;
+        color: $white;
+        cursor: pointer;
+      }
+      h3.hide {
+        display: none;
+      }
+    }
+    #login {
+      grid-column: 3/4;
+      grid-row: 2/3;
       display: block;
       margin: auto;
       width: 400px;
@@ -65,131 +89,185 @@ body {
       border-radius: 10px;
       box-shadow: $box-shadow-white;
       padding: 50px 35px;
-      h3 {
-        font-size: 1.5rem;
-        text-align: center;
-        color: $white;
-      }
-      label {
-        display: block;
-        margin-top: 2rem;
-        font-size: 1rem;
-      }
-      input {
-        outline: none;
-        border: none;
-        width: 100%;
-        background-color: $violet0;
-        border: $border;
-        border-radius: 4px;
-        padding: 15px 10px;
-        margin-top: 8px;
-        font-weight: 100;
-      }
-      .pass {
-        position: relative;
-        i {
-          position: absolute;
-          top: 50%;
-          left: 20px;
-          transform: translateY(-50%);
+      form {
+        label {
+          display: block;
+          margin-top: 2rem;
+          font-size: 1rem;
+        }
+        input {
+          outline: none;
+          border: none;
+          width: 100%;
+          background-color: $violet0;
+          border: $border;
+          border-radius: 4px;
+          padding: 15px 10px;
+          margin-top: 8px;
+          font-weight: 100;
+        }
+        .pass {
+          position: relative;
+          i {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            cursor: pointer;
+          }
+        }
+        #show-hide {
+          font-size: 1rem;
+        }
+        button {
+          margin-top: 30px;
+          width: 100%;
+          background-color: $violet2;
+          padding: 15px 0;
+          font-size: 1.2rem;
+          border-radius: 5px;
           cursor: pointer;
+          border: $border;
+          transition: all 0.1s;
+          &:hover {
+            background-color: $green;
+            color: $white;
+          }
         }
-      }
-      #show-hide {
-        font-size: 1rem;
-      }
-      button {
-        margin-top: 30px;
-        width: 100%;
-        background-color: $violet2;
-        padding: 15px 0;
-        font-size: 1.2rem;
-        border-radius: 5px;
-        cursor: pointer;
-        border: $border;
-        transition: all 0.1s;
-        &:hover {
-          background-color: $green;
-          color: $white;
+        hr {
+          margin-top: 20px;
+          height: 1px;
+          background-color: $white;
+          border: none;
+          outline: $green;
         }
-      }
-      hr {
-        margin-top: 20px;
-        height: 1px;
-        background-color: $white;
-        border: none;
-        outline: $green;
-      }
-      .social-countainer {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        h3 {
+        .social-countainer {
           margin-top: 20px;
           margin-bottom: 20px;
-        }
-        .social {
-          display: flex;
-          justify-content: center;
-          width: 100%;
-          div {
-            background-color: $violet1;
-            width: 150px;
-            border: $border;
-            border-radius: 5px;
-            text-align: center;
-            padding: 1px 5px;
-            margin: 0 14px;
-            cursor: pointer;
-            &:hover {
-              background-color: $green;
-            }
-            &:hover a i {
-              color: $white;
-            }
-            a {
-              text-decoration: none;
-              color: $violet4;
-              i {
-                margin-right: 4px;
+          h3 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+          .social {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            div {
+              background-color: $violet1;
+              width: 150px;
+              border: $border;
+              border-radius: 5px;
+              text-align: center;
+              padding: 1px 5px;
+              margin: 0 14px;
+              cursor: pointer;
+              &:hover {
+                background-color: $green;
+              }
+              &:hover a i {
+                color: $white;
+              }
+              a {
+                text-decoration: none;
+                color: $violet4;
+                i {
+                  margin-right: 4px;
+                }
               }
             }
           }
         }
       }
     }
+    #login.hide {
+      display: none;
+    }
+    #sign-up {
+      grid-column: 3/4;
+      grid-row: 2/3;
+      display: block;
+      margin: auto;
+      width: 400px;
+      background-color: $violet-bg;
+      border: $border;
+      border-radius: 10px;
+      box-shadow: $box-shadow-white;
+      padding: 50px 35px;
+      form {
+        input {
+          outline: none;
+          border: none;
+          width: 100%;
+          background-color: $violet0;
+          border: $border;
+          border-radius: 4px;
+          padding: 15px 10px;
+          margin-top: 8px;
+          font-weight: 100;
+        }
+        .pass {
+          position: relative;
+          i {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            cursor: pointer;
+          }
+        }
+        button {
+          margin-top: 30px;
+          width: 100%;
+          background-color: $violet2;
+          padding: 15px 0;
+          font-size: 1.2rem;
+          border-radius: 5px;
+          cursor: pointer;
+          border: $border;
+          transition: all 0.1s;
+          &:hover {
+            background-color: $green;
+            color: $white;
+          }
+        }
+      }
+    }
+    #sign-up.hide {
+      display: none;
+    }
+    // }
   }
 }
 // ------------------Footer-------------------------
-.footer{
+.footer {
   background-color: $violet2;
   text-align: center;
-  .share{
-      a{
-          margin: 0 0.3rem;
-          height: 4.5rem;
-          width: 4.5rem;
-          line-height: 4.5rem;
-          border-radius: 50%;
-          font-size: 2rem;
-          color: $white;
-          background-color: $violet-bg;
-          text-align: center;
-          &:hover{
-              background-color: $green;
-          }
-      }
-  }
-  .credit{
-      /* text-align: center; */
-      margin-top: 2.5rem;
-      padding: 1.5rem;
-      border-top: 0.1rem solid $light-white;
+  .share {
+    a {
+      margin: 0 0.3rem;
+      height: 4.5rem;
+      width: 4.5rem;
+      line-height: 4.5rem;
+      border-radius: 50%;
       font-size: 2rem;
-      color: $light-white;
-      span{
-          color: $green;
+      color: $white;
+      background-color: $violet-bg;
+      text-align: center;
+      &:hover {
+        background-color: $green;
       }
+    }
+  }
+  .credit {
+    /* text-align: center; */
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    border-top: 0.1rem solid $light-white;
+    font-size: 2rem;
+    color: $light-white;
+    span {
+      color: $green;
+    }
   }
 }
 
@@ -215,20 +293,21 @@ body.dark {
     }
   }
   .form-container {
-    form {
-      background-color: $light-bg;
-      h3 {
-        color: $violet-bg;
-      }
+    .title{
+      background-color: $violet4;
+    }
+    #login {
+      background-color: $light-white;
+      
       label {
         color: $white;
       }
       input {
-        background-color: $light-white;
+        background-color: $white;
       }
       button {
         color: $white;
-        background-color: $violet0;
+        // background-color: $violet0;
         &:hover {
           background-color: $green;
         }
@@ -247,18 +326,24 @@ body.dark {
         }
       }
     }
-  }
-  .footer{
-    background-color: $light-bg;
-    .share{
-        a{
-            background-color: $black;
-            &:hover{
-                background-color: $green;
-            }
-        }
+    #sign-up{
+      background-color: $light-white;
+      input {
+        background-color: $white;
+      }
     }
-}
+  }
+  .footer {
+    background-color: $light-bg;
+    .share {
+      a {
+        background-color: $black;
+        &:hover {
+          background-color: $green;
+        }
+      }
+    }
+  }
 }
 
 //------------- media querry ------
