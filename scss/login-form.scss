@@ -223,6 +223,11 @@ body {
             cursor: pointer;
           }
         }
+        #errorMessage{
+          color: red;
+          padding: 1rem;
+          font-size: 1.5rem;
+        }
         button {
           margin-top: 30px;
           width: 100%;
