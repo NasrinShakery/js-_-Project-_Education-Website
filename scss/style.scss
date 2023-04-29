@@ -1,23 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 @import "main.scss";
 
-/* @font-face {
-    font-family: 'Rubik';
-    src: url(../fonts/Rubik-VariableFont_wght.ttf) format('truetype'),
-         url(../fonts/Rubik-Italic-VariableFont_wght.ttf);
-} */
-
-//------------------------------------------------
-// $green:#00E77F;
-// $white: #fff;
-// $light-white:#aaa;
-// $black:#3d3d3d;
-// $light-bg:#4b4b4b;
-// $borderBlack:#020202;
-
 //------------------------------------------------
 *{
-    // font-family: 'Rubik', sans-serif;
     font-family: 'amin';
     margin: 0; padding: 0;
     box-sizing: border-box;
@@ -27,10 +12,6 @@
     transition: 0.2s linear;
     text-transform: capitalize;
 }
-// *::selection{
-//     background-color: $white;
-//     color: $black;
-// }
 html{
     font-size: 62.5%;
     overflow-x: hidden;
@@ -72,14 +53,34 @@ html{
 body.dark{
     background-color: $black;
     transition: .3s;
+    #loader-wrapper{
+        background-color: $black;
+    }
     .header{
         background-color: $light-bg;
         .flex{
+            .clock{
+                background-color: $black;
+                box-shadow: $box-shadow-white;
+                color: $violet0;
+            }
             #switch{
                 background-color: $black;
                 .flicker {
                     transform: translateX(4rem);
-                  }
+                }
+            }
+        }
+    }
+    #dic{
+        .row{
+            .dictionary{
+                background-color: $light-bg;
+                .search-result{
+                    .fa-volume-up{
+                        color: $violet1;
+                    }
+                }
             }
         }
     }
@@ -153,6 +154,93 @@ body.dark{
         }
     }
 }
+//---------------End Dark Mood------------------------
+
+//-------------- LOADING -----------------------------
+
+@keyframes hover {
+    0% {
+      transform: scale(.5);
+      color: $violet3;
+      -webkit-text-stroke: 2px gray;
+    }
+  
+    20% {
+      transform: scale(1);
+      color: $white;
+      -webkit-text-stroke: 3px red;
+      filter: drop-shadow(0 0 1px $violet3)drop-shadow(0 0 1px $violet3)drop-shadow(0 0 3px red)drop-shadow(0 0 5px red)hue-rotate(10turn);
+    }
+  
+    50% {
+      transform: scale(.5);
+      color: $violet2;
+      -webkit-text-stroke: 2px gray;
+    }
+}
+
+@keyframes fadeOut {
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+}
+
+#loader-wrapper{
+    direction: ltr;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: $violet-bg;
+    align-items: center;
+    justify-content: center;
+    #loader{
+        text-align: center;
+        p {
+            display: inline-block;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 10rem;
+            font-family: arial;
+            font-weight: 600;
+            transform: scale(.5);
+            color: $violet0;
+            -webkit-text-stroke: 2px gray;
+            &:nth-child(1) {
+                animation: hover 1s linear infinite;
+            }
+            &:nth-child(2) {
+                animation: hover 1s linear infinite .125s;
+            }
+            &:nth-child(3) {
+                animation: hover 1s linear infinite .25s;
+            }
+            &:nth-child(4) {
+                animation: hover 1s linear infinite .375s;
+            }
+            &:nth-child(5) {
+                animation: hover 1s linear infinite .5s;
+            }
+            &:nth-child(6) {
+                animation: hover 1s linear infinite .675s;
+            }
+            &:nth-child(7) {
+                animation: hover 1s linear infinite .75s;
+            }
+        }
+    }
+    #loader.hidden {
+        animation: fadeOut 1s;
+        animation-fill-mode: forwards;
+    }
+}
+#oader-wrapper.hidden {
+        animation: fadeOut 1s;
+        animation-fill-mode: forwards;
+}
+
+//---------------Light Mood------------------------
+
 // -------------Header------------------
 .header{
     background-color: $violet3;
@@ -182,35 +270,21 @@ body.dark{
             font-size: 2.5rem;
             display: none;
         }
-        //----- Dark & Light Mood ----
-        // #switch{
-        //     width: 8rem;
-        //     height: 4rem;
-        //     background-color: $violet4;
-        //     border-radius: 2rem;
-        //     position: relative;
-        //     .flicker{
-        //         background-color: $white;
-        //         width: 3rem;
-        //         height: 3rem;
-        //         border-radius: 1.5rem;
-        //         position: absolute;
-        //         top: .5rem;
-        //         left: .5rem;
-        //         transition: .3s;
-        //         box-shadow: inset 4px 4px 4px rgb(255, 255, 255),
-        //                     inset -4px -4px 4px rgb(195 193 198 / 90%);
-        //     }
-        //     .moon{
-        //         width: 2rem;
-        //         height: 2rem;
-        //         border-radius: 1rem;
-        //         box-shadow: 4px 4px 0 0 $white;
-        //         position: absolute;
-        //         top: .5rem;
-        //         left: 4.5rem;
-        //     }
-        // }
+        .clock{
+            background-color: $violet2;
+            font-family: 'Courier New', Courier, monospace;
+            // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            // font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: $white;
+            font-weight: 900;
+            font-style: italic;
+            padding: .5rem;
+            border-radius: 15rem;
+            text-transform: lowercase;
+            font-size: 2rem;
+            // font-family: ;
+            letter-spacing: 7px;
+        }
         @include switchMood ();
     }
 }
@@ -286,32 +360,94 @@ body.dark{
         }
     }
 }
-// ----------------About------------------
-.about{
+// ----------------Dictionary------------------
+#dic{
     .row{
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        // align-items: center;
+        gap: 1rem;
         .image{
-            flex: 1 1 40rem;
+            width: 100%;
             img{
                 width: 100%;
             }
         }
         .content{
+            display: flex;
             text-align: center;
-            flex: 1 1 40rem;
-            h3{
-                font-size: 3rem;
-                color: $white;
+            justify-content: center;
+            .dictionary{
+                border: $border;
+                background: $violet-bg;
+                border-radius: 1.5rem;
+                color: #fff;
+                width: 100%;
+                direction: ltr;
+                // height: 80%;
+                margin: 0 auto;
+                #dic-title{
+                    padding: 2rem;
+                    text-align: center;
+                    font-size: 3rem;
+                    font-family: 'Times New Roman', Times, serif;
+                    text-shadow: -5px -3px 2px $violet3;
+                }
+                .input-wrapper{
+                    position: relative;
+                    .txtBox {
+                        border: 1px solid #999;
+                        border-radius: 11px;
+                        font-size:16px;
+                        padding: 15px;
+                        width:90%;
+                        &:focus{
+                            border: 2px solid #9019e6;
+                        }
+                        &::placeholder{
+                            color: #B8B8B8;
+                        }
+                      }
+                    .fa-times{
+                        font-size: 2rem;
+                        color: $violet-bg;
+                        position: absolute;
+                        top:30%;
+                        left: 85%;
+                    }
+                }
+                .search-result{
+                    padding:20px;
+                    .description{
+                        font-size: 2rem;
+                    }
+                    .volume-box{
+                        display: grid;
+                        grid-template-columns: 10% 10%;
+                        #volume{
+                            font-size: 2.5rem;
+                            border-radius: 50%;
+                            // padding: 2rem;
+                            width: 2rem;
+                            height: 2rem;
+                            margin-left: 3rem;
+                            // color: $violet1;
+                            cursor: pointer;
+                            display: none;
+                        }
+                        #phonetic{
+                            margin-left: 2rem;
+                            font-size: 2rem;
+                        }
+                    }
+                    #meaning{
+                        padding: 1.5rem;
+                        font-size: 2rem;
+                    }
+                }
             }
-            p{
-                padding: 1rem 0;
-                line-height: 2;
-                font-size: 1.6rem;
-                color: $light-white;
-            }
+            
+            
         }
     }
 }
@@ -337,6 +473,9 @@ body.dark{
                         margin: 1.5rem;
                         font-size: 2rem;
                         color: $white;
+                        &:hover{
+                            color: $green;
+                        }
                     }
                 }
                 p{
@@ -392,12 +531,19 @@ body.dark{
                         color: $black;
                         text-align: center;
                         &:hover{
-                            
                             background-color: $green;
                             color: $white;
                         }
                     }
-                    
+                    a.fa-instagram{
+                        color: palevioletred;
+                    }
+                    a.fa-telegram{
+                        color: dodgerblue;
+                    }
+                    a.fa-whatsapp{
+                        color: lime;
+                    }
                 }
                 &:hover .share{
                     left: 3.5rem;
@@ -408,6 +554,10 @@ body.dark{
                     font-size: 2rem;
                     color: $white;
                     text-align: center;
+                    cursor: pointer;
+                    &:hover{
+                        color: $green;
+                    }
                 }
             }
         }
@@ -451,7 +601,7 @@ body.dark{
                         .stars{
                             i{
                                 font-size: 1.6rem;
-                                color: $green;
+                                color: $starYellow;
                             }
                         }
                     }

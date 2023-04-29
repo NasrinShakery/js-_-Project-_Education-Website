@@ -1,135 +1,398 @@
 @import "main.scss";
 
-
-
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'amin';
+//-------------------------------------------
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "amin";
 }
-body{
-    direction: rtl;
-    #switchWrapper{
-        position: fixed;
-        top: 15%;
-        left: 1%;
-        transform: scale(.7);
-        @include switchMood ();
-    }   
-    .form-container{
-        width: 100%;
-        padding: 50px 20px;
-        display: flex;
-        justify-content: center;
-        form{
-            display: block;
-            margin: auto;
-            width: 400px;
-            background-color: $violet-bg;
-            border: $border;
-            border-radius: 10px;
-            box-shadow: $box-shadow-white;
-            padding: 50px 35px;
-            h3{
-                font-size: 1.5rem;
-                text-align: center;
-                color: $white;
-            }
-            label{
-                display: block;
-                margin-top: 2rem;
-                font-size: 1rem;
-            }
-            input{
-                outline: none;
-                border: none;
-                width: 100%;
-                background-color: $violet0;
-                border: $border;
-                border-radius: 4px;
-                padding: 15px 10px;
-                margin-top: 8px;
-                font-weight: 100;
-            }
-            .pass{
-                position: relative;
-                i{
-                    position: absolute;
-                    top: 50%;
-                    left: 20px;
-                    transform: translateY(-50%);
-                    cursor: pointer;
-                }
-            }
-            #show-hide{
-                font-size: 1rem;
-            }
-            button{
-                margin-top: 30px;
-                width: 100%;
-                background-color: $violet2;
-                padding: 15px 0;
-                font-size: 1.2rem;
-                border-radius: 5px;
-                cursor: pointer;
-                border: $border;
-                transition: all 0.1s;
-                &:hover{
-                    background-color: $green;
-                    color: $white;
-                }
-            }
-            hr{
-                margin-top: 20px;
-                height: 1px;
-                background-color: $white;
-                border: none;
-                outline: $green;
-            }
-            .social-countainer{
-                margin-top: 20px;
-                margin-bottom: 20px;
-                h3{
-                    margin-top: 20px;
-                    margin-bottom: 20px;
-                }
-                .social{
-                    display: flex;
-                    justify-content: center;
-                    width: 100%;
-                    div{
-                        background-color: $violet1;
-                        width: 150px;
-                        border: $border;
-                        border-radius: 5px;
-                        text-align: center;
-                        padding: 1px 5px;
-                        margin: 0 14px;
-                        cursor: pointer;
-                        &:hover{
-                            background-color: $green;
-                        }
-                        &:hover a i{
-                            color: $white;
-                        }
-                        a{
-                            text-decoration: none;
-                            color: $violet4;
-                            i{
-                                margin-right: 4px;
-                            }
-                        }
-                    }
-                }
-            }
+body {
+  direction: rtl;
+  // -------------Header------------------
+  .header {
+    background-color: $violet3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    .flex {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .navbar {
+        a {
+          text-decoration: none;
+          margin-left: 2rem;
+          color: $light-white;
+          font-size: 2rem;
+          &:hover {
+            color: $green;
+          }
         }
+      }
+      #menu-btn {
+        cursor: pointer;
+        color: $white;
+        font-size: 2.5rem;
+        display: none;
+      }
+      .home {
+        display: flex;
+        .home-btn {
+          position: relative;
+          font-size: 1.7rem;
+          margin: 0 1.5rem;
+        }
+        @include switchMood();
+      }
     }
+  }
+  .form-container {
+    margin-top: 8rem;
+    width: 100%;
+    padding: 50px 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    // grid-template-rows: 1fr 4fr;
+    .title {
+      grid-column: 3/4;
+      height: 50px;
+      background-color: $violet2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
+      margin-bottom: 1rem;
+      h3 {
+        margin: 1rem;
+        padding: 4rem;
+        font-size: 2.5rem;
+        text-align: center;
+        color: $white;
+        cursor: pointer;
+      }
+      h3.hide {
+        display: none;
+      }
+    }
+    #login {
+      z-index: 2;
+      grid-column: 3/4;
+      grid-row: 2/3;
+      display: block;
+      margin: auto;
+      width: 400px;
+      background-color: $violet-bg;
+      border: $border;
+      border-radius: 10px;
+      box-shadow: $box-shadow-white;
+      padding: 50px 35px;
+      form {
+        label {
+          display: block;
+          margin-top: 2rem;
+          font-size: 1rem;
+        }
+        input {
+          outline: none;
+          border: none;
+          width: 100%;
+          background-color: $violet0;
+          border: $border;
+          border-radius: 4px;
+          padding: 15px 10px;
+          margin-top: 8px;
+          font-weight: 100;
+        }
+        .pass {
+          position: relative;
+          i {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            cursor: pointer;
+          }
+        }
+        #show-hide {
+          font-size: 1rem;
+        }
+        button {
+          margin-top: 30px;
+          width: 100%;
+          background-color: $violet2;
+          padding: 15px 0;
+          font-size: 1.2rem;
+          border-radius: 5px;
+          cursor: pointer;
+          border: $border;
+          transition: all 0.1s;
+          &:hover {
+            background-color: $green;
+            color: $white;
+          }
+          a{
+            text-decoration: none;
+            font-size: 2rem;
+            &:hover{
+              color: $white;
+            }
+          }
+        }
+        hr {
+          margin-top: 20px;
+          height: 1px;
+          background-color: $white;
+          border: none;
+          outline: $green;
+        }
+        .social-countainer {
+          margin-top: 20px;
+          margin-bottom: 20px;
+          h3 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+          .social {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            div {
+              background-color: $violet1;
+              width: 150px;
+              border: $border;
+              border-radius: 5px;
+              text-align: center;
+              padding: 1px 5px;
+              margin: 0 14px;
+              cursor: pointer;
+              &:hover {
+                background-color: $green;
+              }
+              &:hover a i {
+                color: $white;
+              }
+              a {
+                text-decoration: none;
+                color: $violet4;
+                i {
+                  margin-right: 4px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #login.hide {
+      display: none;
+    }
+    #sign-up {
+      grid-column: 3/4;
+      grid-row: 2/3;
+      display: block;
+      margin: auto;
+      width: 400px;
+      background-color: $violet-bg;
+      border: $border;
+      border-radius: 10px;
+      box-shadow: $box-shadow-white;
+      padding: 50px 35px;
+      form {
+        input {
+          outline: none;
+          border: none;
+          width: 100%;
+          background-color: $violet0;
+          border: $border;
+          border-radius: 4px;
+          padding: 15px 10px;
+          margin-top: 8px;
+          font-weight: 100;
+        }
+        .pass {
+          position: relative;
+          i {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            cursor: pointer;
+          }
+        }
+        #errorMessage{
+          color: red;
+          padding: 1rem;
+          font-size: 1.5rem;
+        }
+        button {
+          margin-top: 30px;
+          width: 100%;
+          background-color: $violet2;
+          padding: 15px 0;
+          font-size: 1.2rem;
+          border-radius: 5px;
+          cursor: pointer;
+          border: $border;
+          transition: all 0.1s;
+          &:hover {
+            background-color: $green;
+            color: $white;
+          }
+        }
+      }
+    }
+    #sign-up.hide {
+      display: none;
+    }
+    // }
+  }
 }
-//-------------------
-@media screen and (max-width:462){
-    form{
-        width: 100%;
+// ------------------Footer-------------------------
+.footer {
+  background-color: $violet2;
+  text-align: center;
+  .share {
+    a {
+      margin: 0 0.3rem;
+      height: 4.5rem;
+      width: 4.5rem;
+      line-height: 4.5rem;
+      border-radius: 50%;
+      font-size: 2rem;
+      color: $white;
+      background-color: $violet-bg;
+      text-align: center;
+      &:hover {
+        background-color: $green;
+      }
     }
+  }
+  .credit {
+    /* text-align: center; */
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    border-top: 0.1rem solid $light-white;
+    font-size: 2rem;
+    color: $light-white;
+    span {
+      color: $green;
+    }
+  }
+}
+
+//---------------Dark Mood------------------------
+body.dark {
+  background-color: $black;
+  transition: 0.3s;
+  .header {
+    background-color: $light-bg;
+    .flex {
+      #switch {
+        background-color: $black;
+        .flicker {
+          transform: translateX(4rem);
+        }
+      }
+      .home-btn {
+        background-color: $black;
+        &:hover a i {
+          color: $green;
+        }
+      }
+    }
+  }
+  .form-container {
+    .title{
+      background-color: $violet4;
+    }
+    #login {
+      background-color: $light-white;
+      
+      label {
+        color: $white;
+      }
+      input {
+        background-color: $white;
+      }
+      button {
+        color: $white;
+        // background-color: $violet0;
+        &:hover {
+          background-color: $green;
+        }
+      }
+      .social-countainer {
+        .social {
+          div {
+            background-color: $violet0;
+            &:hover {
+              background-color: $green;
+            }
+            &:hover a i {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+    #sign-up{
+      background-color: $light-white;
+      input {
+        background-color: $white;
+      }
+    }
+  }
+  .footer {
+    background-color: $light-bg;
+    .share {
+      a {
+        background-color: $black;
+        &:hover {
+          background-color: $green;
+        }
+      }
+    }
+  }
+}
+
+//------------- media querry ------
+// @media screen and (max-width: 462) {
+//   form {
+//     width: 100%;
+//   }
+// }
+
+@media (max-width: 768px) {
+  .header {
+    .flex {
+      #menu-btn {
+        display: inline-block;
+        &.fa-times {
+          transform: rotate(180deg);
+        }
+      }
+      .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        border-top: 0.1rem solid $light-white;
+        border-bottom: 0.1rem solid $light-white;
+        background-color: $violet3;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        &.active {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+        a {
+          display: block;
+          text-align: center;
+          margin: 2rem;
+        }
+      }
+    }
+  }
 }

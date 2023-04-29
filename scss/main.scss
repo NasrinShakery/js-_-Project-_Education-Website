@@ -1,4 +1,5 @@
 
+//-----------------typography-----------
 @font-face {
     font-family: 'amin';
     src: url(../fonts/amin.ttf) format('truetype')
@@ -8,10 +9,6 @@
     src: url(../fonts/Sultan\ Adan\ 2Line\ .ttf) format('truetype')
 } 
 
-//---------------------------------------------------------------
-
-
-
 //--------------------------------------------------------------
 $violet4: #5a189a;
 $violet3: #7b2cbf;
@@ -20,6 +17,7 @@ $violet1:#c77dff;
 $violet0: #e0aaff;
 $violet-bg: #c4aaff;
 $green:#00E77F;
+$starYellow: #ffff00;
 $white: #fff;
 $light-white:#aaa;
 $light-bg:#4b4b4b;
@@ -31,6 +29,22 @@ $white-shadow: rgba(122,122,122,0.3);
 $box-shadow-white: 4px 4px 20px rgba(122,122,122,0.3);
 
 //-----------------------------
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+}
+body{
+    font-family: 'amin';
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s linear;
+    text-transform: capitalize;
+}
 body{
     direction: rtl;
     // background-color: $black;
@@ -75,100 +89,13 @@ body{
 }
 //---------------------------------------
 
-// body.dark{
-//     background-color: $black;
-//     transition: .3s;
-//     .header{
-//         background-color: $light-bg;
-//         .flex{
-//             #switch{
-//                 background-color: $black;
-//                 .flicker {
-//                     transform: translateX(4rem);
-//                   }
-//             }
-//         }
-//     }
-//     .count{
-//         .box-container{
-//             .box{
-//                 background-color: $light-bg;
-//                 .content{
-//                     p{
-//                         color: $light-white;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-//     .courses{
-//         .course-slider{
-//             .course-slide{
-//                 background-color: $light-bg;
-//                 p{
-//                     color: $light-white;
-//                 }
-//             }
-//         } 
-//     }
-//     .teachers{
-//         .teachers-slider{
-//             .slide{
-//                 background-color: transparent;
-//                 border: none;
-//             }
-//         }
-//     }
-//     .reviwes{
-//         .reviews-slider{
-//             #students-wrapper{
-//                 .slide{
-//                     background-color: $light-bg;
-//                     p{
-//                         color: $light-white;
-//                     }
-//                 }
-//             }
-            
-//         }
-//     }
-//     .contact{
-//         form{
-//             .box{
-//                 background-color: $light-bg;
-//             }
-//             .radio{
-//                 label{
-//                     color: $light-white;
-//                 }
-//                 input{
-//                     background-color: $light-white;
-//                 }
-//             }
-//         }
-//     }
-//     .footer{
-//         background-color: $light-bg;
-//         .share{
-//             a{
-//                 background-color: $black;
-//                 &:hover{
-//                     background-color: $green;
-//                 }
-//             }
-//         }
-//     }
-// }
-
 .home-btn{
     position: fixed;
-    top: 4%;
+    top: 5%;
     left: 3%;
     z-index: 1000;
     font-size: 2.5rem;
-    box-shadow:0px 0px 20px -6px $white;
-    height: 4.5rem;
-    width: 4.5rem;
+    width: 4rem;
     border-radius: 20%;
     background-color: $violet4;
     display: flex;
@@ -177,10 +104,11 @@ body{
     &:hover{
         background-color: $green;
     }
-    i{
-        color: $white;
-        padding: 1rem;
-        text-align: center;
+    a{
+        i{
+            color: $white;
+            padding: 1rem;
+        }
     }
 }
 

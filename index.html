@@ -4,19 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="nofollow, noindex">
+    <meta name="author" content="Nasrin Shakery">
+    <link rel="icon" href="images/logo/edu32.png" sizes="32x32">
+    <link rel="icon" href="images/logo/edu64.png" sizes="64x64">
     <!-- font awesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
-    <!-- <link rel="stylesheet" href="/localcdn/cdnlocal.css"> -->
-
     <!-- custom css file link -->
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Home</title>
     <!-- swiper css link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
 />
 </head>
 <body>
+    <div id="loader-wrapper">
+        <div id="loader">
+            <p>l</p>
+            <p>o</p>
+            <p>a</p>
+            <p>d</p>
+            <p>i</p>
+            <p>n</p>
+            <p>g</p>
+        </div>
+    </div>
     <!-- header Start -->
     <header class="header">
 
@@ -26,11 +39,13 @@
 
             <nav class="navbar">
                 <a href="#contact">ارتباط با ما</a>
-                <a href="#about">درباره ما</a>
+                <a href="#dic">دیکشنری</a>
                 <a href="#teachers">اساتید</a>
                 <a href="#courses">دوره ها</a>
                 <a href="pages/login-form.html">ورود | عضویت</a>
             </nav>
+
+            <div id="MyClockDisplay" class="clock" ></div>
 
             <div id="switch">
                 <div class="flicker"></div>
@@ -100,27 +115,47 @@
     </section>
     <!-- counter section End -->
 
-    <!-- about section Start -->
+    <!-- dictionary section Start -->
 
-    <section class="about" id="about">
+    <section class="about" id="dic">
         <div class="row">
             <div class="image">
                 <img src="images/grapy-online-appointment-with-a-psychologist.png" alt="online-appointment">
             </div>
 
             <div class="content">
-                <h3>چرا ما را انتخاب کنید؟</h3>
-                <p>
-                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، 
-                    و با استفاده از طراحان گرافیک است، چاپگرها و 
-                </p>
-                <a href="contact" class="btn">ارتباط با ما</a>
+                
+                <div class="dictionary">
+                    <h2 id="dic-title">Dictionary</h2>
+       
+                    <div class="input-wrapper">
+                        <input type="text" class="txtBox" placeholder="لغت مورد نظرت رو وارد کن">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="search-result">
+                    
+                        <p class="description"></p>
+
+                        <div class="volume-box">
+                            <i id="volume" class="fas fa-volume-up"></i>
+                    
+                            <span id="phonetic"></span>
+                        </div>
+                    
+                    
+                        <p id="meaning"></p>
+
+                    </div>
+                </div>
+                
+
             </div>
         </div>
     </section>
 
 
-    <!-- about section End -->
+    <!-- dictionary section End -->
 
     <!-- courses section Start -->
     <section class="courses" id="courses">
@@ -270,11 +305,11 @@
 
 
 
-    <!-- swioer js link -->
+    <!-- swiper js link -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- custom js file link -->
-    <script src="js/script.js"></script>
-    <!-- <script src="js/test.js"></script> -->
+    <script src="js/app.js"></script>
+    <script src="js/dic-app.js"></script>
     
 </body>
 </html>
